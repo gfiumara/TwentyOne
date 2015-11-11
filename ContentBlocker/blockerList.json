@@ -1,0 +1,9 @@
+[{
+	"action": {
+		"type": "css-display-none",
+		"selector": "div[id*=agegate]"
+		},
+	"trigger": {
+		"url-filter": "dogfish.com"
+	}
+ }]

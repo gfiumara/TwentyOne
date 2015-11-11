@@ -8,4 +8,13 @@
 		"url-filter": "dogfish.com"
 	}
  },
+ {
+	"action": {
+		"type": "css-display-none",
+		"selector": "div[id*=ageGate]"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "sierranevada.com"
+ 	}
+ }
  ]

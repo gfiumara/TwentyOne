@@ -2,6 +2,7 @@
 {
 	"action": {
 		"type": "css-display-none",
+		"resource-type": "document",
 		"selector": "[id*=agegate]"
 	},
 	"trigger": {
@@ -11,6 +12,7 @@
 {
 	"action": {
 		"type": "css-display-none",
+		"resource-type": "document",
 		"selector": "[id*=ageGate], [id*=agegate]"
  	},
  	"trigger": {

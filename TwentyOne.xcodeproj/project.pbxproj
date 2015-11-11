@@ -12,20 +12,58 @@
 		08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317A1BF3D2F900D30625 /* Main.storyboard */; };
 		08FD317E1BF3D2F900D30625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317D1BF3D2F900D30625 /* Assets.xcassets */; };
 		08FD31811BF3D2F900D30625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317F1BF3D2F900D30625 /* LaunchScreen.storyboard */; };
+		08FD318F1BF3D3D400D30625 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 08FD318E1BF3D3D400D30625 /* blockerList.json */; };
+		08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */; };
+		08FD31951BF3D3D400D30625 /* TwentyOneContentBlocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		08FD31931BF3D3D400D30625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FD316B1BF3D2F900D30625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08FD318B1BF3D3D400D30625;
+			remoteInfo = ContentBlocker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		08FD31991BF3D3D400D30625 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				08FD31951BF3D3D400D30625 /* TwentyOneContentBlocker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		08FD31731BF3D2F900D30625 /* TwentyOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FD31731BF3D2F900D30625 /* Twenty One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twenty One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FD31761BF3D2F900D30625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08FD31781BF3D2F900D30625 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08FD317B1BF3D2F900D30625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08FD317D1BF3D2F900D30625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08FD31801BF3D2F900D30625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08FD31821BF3D2F900D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TwentyOneContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FD318E1BF3D3D400D30625 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		08FD31921BF3D3D400D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		08FD31701BF3D2F900D30625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08FD31891BF3D3D400D30625 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				08FD31751BF3D2F900D30625 /* TwentyOne */,
+				08FD318D1BF3D3D400D30625 /* ContentBlocker */,
 				08FD31741BF3D2F900D30625 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,7 +85,8 @@
 		08FD31741BF3D2F900D30625 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08FD31731BF3D2F900D30625 /* TwentyOne.app */,
+				08FD31731BF3D2F900D30625 /* Twenty One.app */,
+				08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +104,16 @@
 			path = TwentyOne;
 			sourceTree = "<group>";
 		};
+		08FD318D1BF3D3D400D30625 /* ContentBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				08FD318E1BF3D3D400D30625 /* blockerList.json */,
+				08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */,
+				08FD31921BF3D3D400D30625 /* Info.plist */,
+			);
+			path = ContentBlocker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +124,34 @@
 				08FD316F1BF3D2F900D30625 /* Sources */,
 				08FD31701BF3D2F900D30625 /* Frameworks */,
 				08FD31711BF3D2F900D30625 /* Resources */,
+				08FD31991BF3D3D400D30625 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08FD31941BF3D3D400D30625 /* PBXTargetDependency */,
+			);
+			name = TwentyOne;
+			productName = TwentyOne;
+			productReference = 08FD31731BF3D2F900D30625 /* Twenty One.app */;
+			productType = "com.apple.product-type.application";
+		};
+		08FD318B1BF3D3D400D30625 /* TwentyOneContentBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08FD31961BF3D3D400D30625 /* Build configuration list for PBXNativeTarget "TwentyOneContentBlocker" */;
+			buildPhases = (
+				08FD31881BF3D3D400D30625 /* Sources */,
+				08FD31891BF3D3D400D30625 /* Frameworks */,
+				08FD318A1BF3D3D400D30625 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TwentyOne;
-			productName = TwentyOne;
-			productReference = 08FD31731BF3D2F900D30625 /* TwentyOne.app */;
-			productType = "com.apple.product-type.application";
+			name = TwentyOneContentBlocker;
+			productName = ContentBlocker;
+			productReference = 08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +164,9 @@
 				ORGANIZATIONNAME = "Greg Fiumara";
 				TargetAttributes = {
 					08FD31721BF3D2F900D30625 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					08FD318B1BF3D3D400D30625 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -113,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				08FD31721BF3D2F900D30625 /* TwentyOne */,
+				08FD318B1BF3D3D400D30625 /* TwentyOneContentBlocker */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +201,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08FD318A1BF3D3D400D30625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08FD318F1BF3D3D400D30625 /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +221,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08FD31881BF3D3D400D30625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08FD31941BF3D3D400D30625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08FD318B1BF3D3D400D30625 /* TwentyOneContentBlocker */;
+			targetProxy = 08FD31931BF3D3D400D30625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		08FD317A1BF3D2F900D30625 /* Main.storyboard */ = {
@@ -247,10 +344,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TwentyOne/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Twenty One";
 			};
 			name = Debug;
 		};
@@ -258,10 +356,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TwentyOne/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone;
+				PRODUCT_NAME = "Twenty One";
+			};
+			name = Release;
+		};
+		08FD31971BF3D3D400D30625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				INFOPLIST_FILE = ContentBlocker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone.contentblocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		08FD31981BF3D3D400D30625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				INFOPLIST_FILE = ContentBlocker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone.contentblocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -282,6 +407,14 @@
 			buildConfigurations = (
 				08FD31861BF3D2F900D30625 /* Debug */,
 				08FD31871BF3D2F900D30625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		08FD31961BF3D3D400D30625 /* Build configuration list for PBXNativeTarget "TwentyOneContentBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08FD31971BF3D3D400D30625 /* Debug */,
+				08FD31981BF3D3D400D30625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

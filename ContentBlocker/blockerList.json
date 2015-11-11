@@ -25,5 +25,15 @@
  	"trigger": {
  		"url-filter": "sierranevada.com/*age[gG]ate*"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#av-overlay-wrap"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "jailbreakbrewing.com"
+ 	}
 }
 ]

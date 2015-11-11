@@ -53,6 +53,8 @@
 		08FD318E1BF3D3D400D30625 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		08FD31921BF3D3D400D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08FD319E1BF408AF00D30625 /* Twenty One.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Twenty One.entitlements"; sourceTree = "<group>"; };
+		08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TwentyOneContentBlocker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		08FD316A1BF3D2F900D30625 = {
 			isa = PBXGroup;
 			children = (
+				08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */,
 				08FD31751BF3D2F900D30625 /* TwentyOne */,
 				08FD318D1BF3D3D400D30625 /* ContentBlocker */,
 				08FD31741BF3D2F900D30625 /* Products */,
@@ -94,6 +97,7 @@
 		08FD31751BF3D2F900D30625 /* TwentyOne */ = {
 			isa = PBXGroup;
 			children = (
+				08FD319E1BF408AF00D30625 /* Twenty One.entitlements */,
 				08FD31761BF3D2F900D30625 /* AppDelegate.swift */,
 				08FD31781BF3D2F900D30625 /* ViewController.swift */,
 				08FD317A1BF3D2F900D30625 /* Main.storyboard */,
@@ -165,9 +169,21 @@
 				TargetAttributes = {
 					08FD31721BF3D2F900D30625 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = SELUQ362Q4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					08FD318B1BF3D3D400D30625 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = SELUQ362Q4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -345,11 +361,15 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TwentyOne/Twenty One.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TwentyOne/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone;
 				PRODUCT_NAME = "Twenty One";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -358,11 +378,15 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TwentyOne/Twenty One.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TwentyOne/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone;
 				PRODUCT_NAME = "Twenty One";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -370,11 +394,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = TwentyOneContentBlocker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContentBlocker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone.contentblocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -383,11 +411,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = TwentyOneContentBlocker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContentBlocker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone.contentblocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -2,19 +2,28 @@
 {
 	"action": {
 		"type": "css-display-none",
-		"selector": "div[id*=agegate]"
+		"selector": "[id*=agegate]"
 	},
 	"trigger": {
 		"url-filter": "dogfish.com"
 	}
- },
- {
+},
+{
 	"action": {
 		"type": "css-display-none",
-		"selector": "div[id*=ageGate]"
+		"selector": "[id*=ageGate], [id*=agegate]"
  	},
  	"trigger": {
  		"url-filter": "sierranevada.com"
  	}
- }
- ]
+},
+{
+	"action": {
+		"type": "block",
+		"resource-type": "script"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "sierranevada.com/*age[gG]ate*"
+ 	}
+}
+]

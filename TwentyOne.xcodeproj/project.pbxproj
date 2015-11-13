@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08F02EC61BF563B100B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
 		08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31761BF3D2F900D30625 /* AppDelegate.swift */; };
 		08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31781BF3D2F900D30625 /* ViewController.swift */; };
 		08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317A1BF3D2F900D30625 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		08FD318F1BF3D3D400D30625 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 08FD318E1BF3D3D400D30625 /* blockerList.json */; };
 		08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */; };
 		08FD31951BF3D3D400D30625 /* TwentyOneContentBlocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		08FD319B1BF3F83400D30625 /* BackgroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */; };
+		08FD319D1BF3F93600D30625 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319C1BF3F93600D30625 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08F02EC51BF563B100B5E57E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		08FD31731BF3D2F900D30625 /* Twenty One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twenty One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FD31761BF3D2F900D30625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08FD31781BF3D2F900D30625 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		08FD318E1BF3D3D400D30625 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		08FD31921BF3D3D400D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundDownloader.swift; sourceTree = "<group>"; };
+		08FD319C1BF3F93600D30625 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		08FD319E1BF408AF00D30625 /* Twenty One.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Twenty One.entitlements"; sourceTree = "<group>"; };
 		08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TwentyOneContentBlocker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,11 +105,14 @@
 			children = (
 				08FD319E1BF408AF00D30625 /* Twenty One.entitlements */,
 				08FD31761BF3D2F900D30625 /* AppDelegate.swift */,
+				08FD319C1BF3F93600D30625 /* Constants.swift */,
+				08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */,
 				08FD31781BF3D2F900D30625 /* ViewController.swift */,
 				08FD317A1BF3D2F900D30625 /* Main.storyboard */,
 				08FD317D1BF3D2F900D30625 /* Assets.xcassets */,
 				08FD317F1BF3D2F900D30625 /* LaunchScreen.storyboard */,
 				08FD31821BF3D2F900D30625 /* Info.plist */,
+				08F02EC51BF563B100B5E57E /* Logger.swift */,
 			);
 			path = TwentyOne;
 			sourceTree = "<group>";
@@ -174,6 +183,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 						};
 					};
 					08FD318B1BF3D3D400D30625 = {
@@ -232,8 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F02EC61BF563B100B5E57E /* Logger.swift in Sources */,
+				08FD319B1BF3F83400D30625 /* BackgroundDownloader.swift in Sources */,
 				08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */,
 				08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */,
+				08FD319D1BF3F93600D30625 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +329,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -351,6 +367,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -443,6 +460,7 @@
 				08FD31871BF3D2F900D30625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08FD31961BF3D3D400D30625 /* Build configuration list for PBXNativeTarget "TwentyOneContentBlocker" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +469,7 @@
 				08FD31981BF3D3D400D30625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

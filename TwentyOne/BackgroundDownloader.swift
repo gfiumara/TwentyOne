@@ -90,7 +90,7 @@ public class BackgroundDownloader: NSObject, NSURLSessionTaskDelegate, NSURLSess
 		var error:NSError?
 		var operationDidFinish:Bool = false
 		fileCoordinator.coordinateWritingItemAtURL(uncoordinatedURL, options:.ForReplacing, error:&error, byAccessor:{(writingURL) in
-			let fileManager = NSFileManager.init()
+			let fileManager = NSFileManager.defaultManager()
 			if fileManager.fileExistsAtPath(writingURL.path!) {
 				do {
 					try fileManager.replaceItemAtURL(writingURL, withItemAtURL:uncoordinatedURL, backupItemName:nil, options:.UsingNewMetadataOnly, resultingItemURL:nil)

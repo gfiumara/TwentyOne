@@ -14,4 +14,6 @@ struct Constants
 	static let AppGroupID = "group.com.gregfiumara.twentyone"
 	static let BlockListURL:NSURL = NSURL.init(string:"")!
 	static let BlockListFilename = "downloadedBlockerList.json"
+	static let ErrorDomain = "TwentyOneErrorDomain"
+	static let ErrorIO:Int = 100
 }

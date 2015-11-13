@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08F02EC61BF563B100B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
+		08F02EEF1BF56CCB00B5E57E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319C1BF3F93600D30625 /* Constants.swift */; };
+		08F02EF01BF56CCB00B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
 		08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31761BF3D2F900D30625 /* AppDelegate.swift */; };
 		08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31781BF3D2F900D30625 /* ViewController.swift */; };
 		08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317A1BF3D2F900D30625 /* Main.storyboard */; };
@@ -257,6 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */,
+				08F02EF01BF56CCB00B5E57E /* Logger.swift in Sources */,
+				08F02EEF1BF56CCB00B5E57E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

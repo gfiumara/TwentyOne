@@ -47,5 +47,15 @@
  	"trigger": {
  		"url-filter": "troegs.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".agegate-container, .agegate-overlay, #ageGate-popup, #ageGate-screen"
+	},
+	"trigger": {
+		"url-filter": "samueladams.com"
+	}
 }
 ]

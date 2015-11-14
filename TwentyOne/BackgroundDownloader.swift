@@ -6,6 +6,7 @@
 //  Copyright © 2015 Greg Fiumara. All rights reserved.
 //
 
+import SafariServices
 import UIKit
 
 public class BackgroundDownloader: NSObject, NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate
@@ -41,77 +42,50 @@ public class BackgroundDownloader: NSObject, NSURLSessionTaskDelegate, NSURLSess
 	{
 		Logger.log("Finished downloading");
 		let newData = NSData.init(contentsOfURL:temporaryURL)
-
-		/* See if block list has changed */
-		var uncoordinatedURL = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(Constants.AppGroupID)!;
-		uncoordinatedURL = uncoordinatedURL.URLByAppendingPathComponent(Constants.BlockListFilename)
-		let fileCoordinator = NSFileCoordinator.init(filePresenter:nil)
-		var error:NSError?
-		var operationDidFinish:Bool = false
-		var theSame = false
-		fileCoordinator.coordinateReadingItemAtURL(uncoordinatedURL, options:.ResolvesSymbolicLink, error:&error, byAccessor:{(readingURL) in
-			let oldData = NSData.init(contentsOfURL:readingURL)
-			theSame = (oldData == newData)
-			operationDidFinish = true
-		});
-
-		if error != nil {
-			Logger.log("ERROR (comparing data): \(error)")
-			self.completionHandler(.Failed)
+		if newData == nil {
+			Logger.log("Newly downloaded data was nil")
 			return
 		}
 
-		if operationDidFinish != true {
-			Logger.log("ERROR (comparing data): Operation did not finish")
-			self.completionHandler(.Failed)
+		let newDataString = NSString.init(data:newData!, encoding:NSUTF8StringEncoding)
+		if newDataString == nil {
+			Logger.log("Newly downloaded data string was nil")
 			return
 		}
 
-		if (theSame) {
-			Logger.log("Data was the same, not re-writing")
-			self.completionHandler(.NoData)
+		var dataIsNew = false
+		let defaults = NSUserDefaults.init(suiteName:Constants.AppGroupID)
+		if defaults?.objectForKey(Constants.BlockerListKey) == nil {
+			Logger.log("No previous block list found. Storing new block list.")
+			defaults?.setObject(newDataString, forKey:Constants.BlockerListKey)
+			defaults?.synchronize()
+			dataIsNew = true
 		} else {
-			Logger.log("Data was different, writing")
-			BackgroundDownloader.saveBlockListWithData(newData)
-			self.completionHandler(.NewData)
-		}
-	}
-
-	private static func saveBlockListWithData(data:NSData?)
-	{
-		if data == nil {
-			Logger.log("ERROR (saving file): data was nil")
-			return
-		}
-
-		let fileCoordinator = NSFileCoordinator.init(filePresenter:nil)
-		var uncoordinatedURL = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(Constants.AppGroupID)!;
-		uncoordinatedURL = uncoordinatedURL.URLByAppendingPathComponent(Constants.BlockListFilename)
-		var error:NSError?
-		var operationDidFinish:Bool = false
-		fileCoordinator.coordinateWritingItemAtURL(uncoordinatedURL, options:.ForReplacing, error:&error, byAccessor:{(writingURL) in
-			let fileManager = NSFileManager.defaultManager()
-			if fileManager.fileExistsAtPath(writingURL.path!) {
-				do {
-					try fileManager.replaceItemAtURL(writingURL, withItemAtURL:uncoordinatedURL, backupItemName:nil, options:.UsingNewMetadataOnly, resultingItemURL:nil)
-				}
-				catch let error as NSError {
-					operationDidFinish = false
-					Logger.log("ERROR: \(error.localizedDescription)")
-				}
+			let oldString:NSString? = defaults?.objectForKey(Constants.BlockerListKey) as! NSString?
+			if oldString != newDataString {
+				Logger.log("Data is new, saving.")
+				defaults?.setObject(newDataString, forKey:Constants.BlockerListKey)
+				defaults?.synchronize()
+				dataIsNew = true
 			} else {
-				operationDidFinish = data!.writeToURL(writingURL, atomically:true)
+				Logger.log("Downloaded data was the same")
+				dataIsNew = false
 			}
-		})
-
-		if error != nil {
-			Logger.log("ERROR (saving file): \(error?.localizedDescription)")
-			return
 		}
 
-		if operationDidFinish != true {
-			Logger.log("ERROR (saving file): Operation did not complete successfully")
-			return
+		/* Rebuild and return to application delegate */
+		if dataIsNew {
+			Logger.log("Rebuilding blocker rules")
+			SFContentBlockerManager.reloadContentBlockerWithIdentifier(Constants.ContentBlockerBundleID, completionHandler:{(error) -> Void in
+				if error == nil {
+					Logger.log("Rebuild was successful")
+				} else {
+					Logger.log("ERROR (rebuilding rules): \(error?.debugDescription)")
+				}
+				self.completionHandler(.NewData)
+			})
+		} else {
+			self.completionHandler(.NoData)
 		}
 	}
 }

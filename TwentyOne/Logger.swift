@@ -16,7 +16,7 @@ public struct Logger
 	public static var enabled:Bool = false
 	#endif
 
-	public static func log(message:String, function:String = __FUNCTION__, line:Int = __LINE__)
+	public static func log(message:String, file:String = __FILE__, function:String = __FUNCTION__, line:Int = __LINE__)
 	{
 		if !Logger.enabled {
 			return

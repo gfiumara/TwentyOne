@@ -17,6 +17,7 @@
 		08F966A31BF79A7C007C9E2A /* TwentyOneStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966A21BF79A7C007C9E2A /* TwentyOneStepIconView.swift */; };
 		08F966A91BF7A43A007C9E2A /* ProceduralImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */; };
 		08F966AB1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */; };
+		08F966AD1BF7AD6E007C9E2A /* ForegroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966AC1BF7AD6E007C9E2A /* ForegroundDownloader.swift */; };
 		08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31761BF3D2F900D30625 /* AppDelegate.swift */; };
 		08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31781BF3D2F900D30625 /* ViewController.swift */; };
 		08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317A1BF3D2F900D30625 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		08F966A21BF79A7C007C9E2A /* TwentyOneStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwentyOneStepIconView.swift; path = iconViews/TwentyOneStepIconView.swift; sourceTree = "<group>"; };
 		08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduralImages.swift; sourceTree = "<group>"; };
 		08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwentyOneHeaderIconView.swift; path = iconViews/TwentyOneHeaderIconView.swift; sourceTree = "<group>"; };
+		08F966AC1BF7AD6E007C9E2A /* ForegroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForegroundDownloader.swift; sourceTree = "<group>"; };
 		08FD31731BF3D2F900D30625 /* Twenty One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twenty One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FD31761BF3D2F900D30625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08FD31781BF3D2F900D30625 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				08FD31761BF3D2F900D30625 /* AppDelegate.swift */,
 				08FD319C1BF3F93600D30625 /* Constants.swift */,
 				08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */,
+				08F966AC1BF7AD6E007C9E2A /* ForegroundDownloader.swift */,
 				08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */,
 				08FD31781BF3D2F900D30625 /* ViewController.swift */,
 				08FD317A1BF3D2F900D30625 /* Main.storyboard */,
@@ -284,6 +287,7 @@
 				08F966AB1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift in Sources */,
 				08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */,
 				08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */,
+				08F966AD1BF7AD6E007C9E2A /* ForegroundDownloader.swift in Sources */,
 				08F966A31BF79A7C007C9E2A /* TwentyOneStepIconView.swift in Sources */,
 				08FD319D1BF3F93600D30625 /* Constants.swift in Sources */,
 				08F02EF21BF6C3E800B5E57E /* BlockListUpdater.swift in Sources */,

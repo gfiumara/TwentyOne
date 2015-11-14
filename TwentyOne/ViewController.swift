@@ -71,6 +71,29 @@ class ViewController: UIViewController {
 
 	@IBAction func forceUpdateButtonPressed(button:UIButton)
 	{
+		self.forceUpdateButton.enabled = false
+		self.forceUpdateButton.setTitle("Fetching update...", forState:.Normal)
+		ForegroundDownloader.updateBlocklist({(data, response) in
+			BlockListUpdater.saveAndRecompileNewBlockListData(data, completionHandler:{(result) in
+				Logger.log("Retrieved block list data from remote")
+				dispatch_async(dispatch_get_main_queue(), {
+					self.updateDates()
+					self.forceUpdateButton.setTitle("Successfully Forced Update", forState:.Normal)
+				})
+			})
+			}, failure:{(error, response) in
+				Logger.log("ERROR (update blocklist): \(error.localizedDescription)")
+				dispatch_async(dispatch_get_main_queue(), {
+					self.forceUpdateButton.setAttributedTitle(NSAttributedString.init(string:"An Error Occurred", attributes:[NSForegroundColorAttributeName:UIColor.redColor()]), forState:.Normal)
+					self.forceUpdateButton.enabled = true
+					self.updateDates()
+
+					let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
+					dispatch_after(delayTime, dispatch_get_main_queue()) {
+						self.forceUpdateButton.setTitle("Force Update", forState:.Normal)
+					}
+				})
+		})
 	}
 }
 

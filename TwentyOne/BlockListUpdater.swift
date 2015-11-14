@@ -22,8 +22,11 @@ public struct BlockListUpdater
 			return
 		}
 
-		var dataIsNew = false
+		let currentDateAndTime = NSDate.init()
 		let defaults = NSUserDefaults.init(suiteName:Constants.AppGroupID)
+		defaults?.setObject(currentDateAndTime, forKey:Constants.BlockerListRetrievedDateKey)
+
+		var dataIsNew = false
 		if defaults?.objectForKey(Constants.BlockerListKey) == nil {
 			Logger.log("No previous block list found. Storing new block list.")
 			defaults?.setObject(dataString, forKey:Constants.BlockerListKey)
@@ -51,14 +54,17 @@ public struct BlockListUpdater
 				Logger.log("ERROR (rebuilding rules): \(error?.debugDescription)")
 			}
 
-			if (completionHandler != nil) {
-				if dataIsNew {
+			if dataIsNew {
+				defaults?.setObject(currentDateAndTime, forKey:Constants.BlockerListUpdatedDateKey)
+				if (completionHandler != nil) {
 					completionHandler!(.NewData)
-				} else {
+				}
+			} else {
+				if (completionHandler != nil) {
 					completionHandler!(.NoData);
 				}
 			}
 		})
-		
+
 	}
 }

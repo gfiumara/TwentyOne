@@ -20,5 +20,4 @@ struct Constants
 	static let BlockerListKey = "BlockerList"
 	static let BlockerListRetrievedDateKey = "BlockerListRetrievedDate"
 	static let BlockerListUpdatedDateKey = "BlockerListUpdatedDate"
-	static let BlockerListVersionKey = "BlockerListVersion"
 }

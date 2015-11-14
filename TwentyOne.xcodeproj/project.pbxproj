@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08292F111BF7D82D0055F357 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 08292F0F1BF7D8260055F357 /* blockerList.json */; };
 		08F02EC61BF563B100B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
 		08F02EEF1BF56CCB00B5E57E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319C1BF3F93600D30625 /* Constants.swift */; };
 		08F02EF01BF56CCB00B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
@@ -23,7 +24,6 @@
 		08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317A1BF3D2F900D30625 /* Main.storyboard */; };
 		08FD317E1BF3D2F900D30625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317D1BF3D2F900D30625 /* Assets.xcassets */; };
 		08FD31811BF3D2F900D30625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317F1BF3D2F900D30625 /* LaunchScreen.storyboard */; };
-		08FD318F1BF3D3D400D30625 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 08FD318E1BF3D3D400D30625 /* blockerList.json */; };
 		08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */; };
 		08FD31951BF3D3D400D30625 /* TwentyOneContentBlocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		08FD319B1BF3F83400D30625 /* BackgroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */; };
@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08292F0F1BF7D8260055F357 /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = blockerList.json; path = SafariExtension/twentyone.safariextension/blockerList.json; sourceTree = SOURCE_ROOT; };
 		08F02EC51BF563B100B5E57E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockListUpdater.swift; sourceTree = "<group>"; };
 		08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SafariStepIconView.swift; path = iconViews/SafariStepIconView.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		08FD31801BF3D2F900D30625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08FD31821BF3D2F900D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TwentyOneContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		08FD318E1BF3D3D400D30625 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		08FD31921BF3D3D400D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundDownloader.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		08FD318D1BF3D3D400D30625 /* ContentBlocker */ = {
 			isa = PBXGroup;
 			children = (
-				08FD318E1BF3D3D400D30625 /* blockerList.json */,
+				08292F0F1BF7D8260055F357 /* blockerList.json */,
 				08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */,
 				08FD31921BF3D3D400D30625 /* Info.plist */,
 			);
@@ -267,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08FD318F1BF3D3D400D30625 /* blockerList.json in Resources */,
+				08292F111BF7D82D0055F357 /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

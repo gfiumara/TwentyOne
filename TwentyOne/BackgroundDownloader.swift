@@ -76,18 +76,19 @@ public class BackgroundDownloader: NSObject, NSURLSessionTaskDelegate, NSURLSess
 		}
 
 		/* Rebuild and return to application delegate */
-		if dataIsNew {
-			Logger.log("Rebuilding blocker rules")
-			SFContentBlockerManager.reloadContentBlockerWithIdentifier(Constants.ContentBlockerBundleID, completionHandler:{(error) -> Void in
-				if error == nil {
-					Logger.log("Rebuild was successful")
-				} else {
-					Logger.log("ERROR (rebuilding rules): \(error?.debugDescription)")
-				}
+		Logger.log("Rebuilding blocker rules...")
+		SFContentBlockerManager.reloadContentBlockerWithIdentifier(Constants.ContentBlockerBundleID, completionHandler:{(error) -> Void in
+			if error == nil {
+				Logger.log("Rebuild was successful")
+			} else {
+				Logger.log("ERROR (rebuilding rules): \(error?.debugDescription)")
+			}
+
+			if dataIsNew {
 				self.completionHandler(.NewData)
-			})
-		} else {
-			self.completionHandler(.NoData)
-		}
+			} else {
+				self.completionHandler(.NoData);
+			}
+		})
 	}
 }

@@ -27,16 +27,16 @@ public struct BlockListUpdater
 		defaults?.setObject(currentDateAndTime, forKey:Constants.BlockerListRetrievedDateKey)
 
 		var dataIsNew = false
-		if defaults?.objectForKey(Constants.BlockerListKey) == nil {
+		if defaults?.objectForKey(Constants.BlockerListNameKey) == nil {
 			Logger.log("No previous block list found. Storing new block list.")
-			defaults?.setObject(dataString, forKey:Constants.BlockerListKey)
+			defaults?.setObject(dataString, forKey:Constants.BlockerListNameKey)
 			defaults?.synchronize()
 			dataIsNew = true
 		} else {
-			let oldString:NSString? = defaults?.objectForKey(Constants.BlockerListKey) as! NSString?
+			let oldString:NSString? = defaults?.objectForKey(Constants.BlockerListNameKey) as! NSString?
 			if oldString != dataString {
 				Logger.log("Data is new, saving.")
-				defaults?.setObject(dataString, forKey:Constants.BlockerListKey)
+				defaults?.setObject(dataString, forKey:Constants.BlockerListNameKey)
 				defaults?.synchronize()
 				dataIsNew = true
 			} else {

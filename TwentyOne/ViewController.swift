@@ -64,6 +64,9 @@ class ViewController: UIViewController {
 
 	@IBAction func openSettingsAppButtonPressed(button:UIButton)
 	{
+		if UIApplication.sharedApplication().canOpenURL(Constants.SettingsAppURL) {
+			UIApplication.sharedApplication().openURL(Constants.SettingsAppURL)
+		}
 	}
 
 	@IBAction func forceUpdateButtonPressed(button:UIButton)

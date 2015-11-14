@@ -13,6 +13,7 @@ struct Constants
 	static let BackgroundSessionID = "com.gregfiumara.twentyone.backgroundDownload"
 	static let AppGroupID = "group.com.gregfiumara.twentyone"
 	static let BlockListURL:NSURL = NSURL.init(string:"https://api.gregfiumara.com/blockerList.json")!
+	static let SettingsAppURL = NSURL.init(string:"prefs://")!
 	static let ContentBlockerBundleID = "com.gregfiumara.twentyone.contentblocker"
 	static let BlockerListNameKey = "blockerList"
 	static let BlockerListRetrievedDateKey = "BlockerListRetrievedDate"

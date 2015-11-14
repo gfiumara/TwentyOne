@@ -11,6 +11,12 @@
 		08F02EEF1BF56CCB00B5E57E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319C1BF3F93600D30625 /* Constants.swift */; };
 		08F02EF01BF56CCB00B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
 		08F02EF21BF6C3E800B5E57E /* BlockListUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */; };
+		08F9669C1BF799EB007C9E2A /* SafariStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */; };
+		08F9669F1BF79A43007C9E2A /* SettingsStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9669E1BF79A43007C9E2A /* SettingsStepIconView.swift */; };
+		08F966A11BF79A61007C9E2A /* ContentBlockerStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966A01BF79A61007C9E2A /* ContentBlockerStepIconView.swift */; };
+		08F966A31BF79A7C007C9E2A /* TwentyOneStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966A21BF79A7C007C9E2A /* TwentyOneStepIconView.swift */; };
+		08F966A91BF7A43A007C9E2A /* ProceduralImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */; };
+		08F966AB1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */; };
 		08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31761BF3D2F900D30625 /* AppDelegate.swift */; };
 		08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31781BF3D2F900D30625 /* ViewController.swift */; };
 		08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317A1BF3D2F900D30625 /* Main.storyboard */; };
@@ -50,6 +56,12 @@
 /* Begin PBXFileReference section */
 		08F02EC51BF563B100B5E57E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockListUpdater.swift; sourceTree = "<group>"; };
+		08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SafariStepIconView.swift; path = iconViews/SafariStepIconView.swift; sourceTree = "<group>"; };
+		08F9669E1BF79A43007C9E2A /* SettingsStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsStepIconView.swift; path = iconViews/SettingsStepIconView.swift; sourceTree = "<group>"; };
+		08F966A01BF79A61007C9E2A /* ContentBlockerStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentBlockerStepIconView.swift; path = iconViews/ContentBlockerStepIconView.swift; sourceTree = "<group>"; };
+		08F966A21BF79A7C007C9E2A /* TwentyOneStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwentyOneStepIconView.swift; path = iconViews/TwentyOneStepIconView.swift; sourceTree = "<group>"; };
+		08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduralImages.swift; sourceTree = "<group>"; };
+		08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwentyOneHeaderIconView.swift; path = iconViews/TwentyOneHeaderIconView.swift; sourceTree = "<group>"; };
 		08FD31731BF3D2F900D30625 /* Twenty One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twenty One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FD31761BF3D2F900D30625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08FD31781BF3D2F900D30625 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +97,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08F9669D1BF799F2007C9E2A /* iconViews */ = {
+			isa = PBXGroup;
+			children = (
+				08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */,
+				08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */,
+				08F9669E1BF79A43007C9E2A /* SettingsStepIconView.swift */,
+				08F966A21BF79A7C007C9E2A /* TwentyOneStepIconView.swift */,
+				08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */,
+				08F966A01BF79A61007C9E2A /* ContentBlockerStepIconView.swift */,
+			);
+			name = iconViews;
+			sourceTree = "<group>";
+		};
 		08FD316A1BF3D2F900D30625 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +132,7 @@
 		08FD31751BF3D2F900D30625 /* TwentyOne */ = {
 			isa = PBXGroup;
 			children = (
+				08F9669D1BF799F2007C9E2A /* iconViews */,
 				08FD319E1BF408AF00D30625 /* Twenty One.entitlements */,
 				08FD31761BF3D2F900D30625 /* AppDelegate.swift */,
 				08FD319C1BF3F93600D30625 /* Constants.swift */,
@@ -250,9 +276,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				08F02EC61BF563B100B5E57E /* Logger.swift in Sources */,
+				08F9669C1BF799EB007C9E2A /* SafariStepIconView.swift in Sources */,
 				08FD319B1BF3F83400D30625 /* BackgroundDownloader.swift in Sources */,
+				08F966A91BF7A43A007C9E2A /* ProceduralImages.swift in Sources */,
+				08F9669F1BF79A43007C9E2A /* SettingsStepIconView.swift in Sources */,
+				08F966A11BF79A61007C9E2A /* ContentBlockerStepIconView.swift in Sources */,
+				08F966AB1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift in Sources */,
 				08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */,
 				08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */,
+				08F966A31BF79A7C007C9E2A /* TwentyOneStepIconView.swift in Sources */,
 				08FD319D1BF3F93600D30625 /* Constants.swift in Sources */,
 				08F02EF21BF6C3E800B5E57E /* BlockListUpdater.swift in Sources */,
 			);

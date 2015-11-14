@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 			self.enableTwentyOneLabel.text = "Enable \(appName!)"
 		}
 
-		self.subheadLabel.text = "Follow these instructions to block many age gates on alcohol-related websites."
+		self.subheadLabel.text = "Follow these instructions to block age gates on many alcohol-related websites."
 
 		self.updateDates()
 	}
@@ -52,13 +52,13 @@ class ViewController: UIViewController {
 		if lastUpdatedDate == nil {
 			self.listLastUpdatedLabel.text = "List has never been updated."
 		} else {
-			self.listLastUpdatedLabel.text = "List last updated \(dateFormatter!.stringFromDate(lastUpdatedDate as! NSDate))"
+			self.listLastUpdatedLabel.text = "List last updated \(dateFormatter!.stringFromDate(lastUpdatedDate as! NSDate))."
 		}
 
 		if lastCheckedDate == nil {
 			self.listLastCheckedLabel.text = "Never checked for list updates."
 		} else {
-			self.listLastCheckedLabel.text = "Last checked for list updates \(dateFormatter!.stringFromDate(lastCheckedDate as! NSDate))"
+			self.listLastCheckedLabel.text = "Last checked for list updates \(dateFormatter!.stringFromDate(lastCheckedDate as! NSDate))."
 		}
 	}
 

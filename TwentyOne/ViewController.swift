@@ -50,7 +50,7 @@ class ViewController: UIViewController {
 		let lastUpdatedDate = defaults?.objectForKey(Constants.BlockerListUpdatedDateKey)
 
 		if lastUpdatedDate == nil {
-			self.listLastUpdatedLabel.text = "List has never been updated."
+			self.listLastUpdatedLabel.text = "Using default block list."
 		} else {
 			self.listLastUpdatedLabel.text = "List last updated \(dateFormatter!.stringFromDate(lastUpdatedDate as! NSDate))."
 		}

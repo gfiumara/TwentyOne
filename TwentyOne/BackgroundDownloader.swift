@@ -48,47 +48,6 @@ public class BackgroundDownloader: NSObject, NSURLSessionTaskDelegate, NSURLSess
 			return
 		}
 
-		let newDataString = NSString.init(data:newData!, encoding:NSUTF8StringEncoding)
-		if newDataString == nil {
-			Logger.log("Newly downloaded data string was nil")
-			self.completionHandler(.Failed)
-			return
-		}
-
-		var dataIsNew = false
-		let defaults = NSUserDefaults.init(suiteName:Constants.AppGroupID)
-		if defaults?.objectForKey(Constants.BlockerListKey) == nil {
-			Logger.log("No previous block list found. Storing new block list.")
-			defaults?.setObject(newDataString, forKey:Constants.BlockerListKey)
-			defaults?.synchronize()
-			dataIsNew = true
-		} else {
-			let oldString:NSString? = defaults?.objectForKey(Constants.BlockerListKey) as! NSString?
-			if oldString != newDataString {
-				Logger.log("Data is new, saving.")
-				defaults?.setObject(newDataString, forKey:Constants.BlockerListKey)
-				defaults?.synchronize()
-				dataIsNew = true
-			} else {
-				Logger.log("Downloaded data was the same")
-				dataIsNew = false
-			}
-		}
-
-		/* Rebuild and return to application delegate */
-		Logger.log("Rebuilding blocker rules...")
-		SFContentBlockerManager.reloadContentBlockerWithIdentifier(Constants.ContentBlockerBundleID, completionHandler:{(error) -> Void in
-			if error == nil {
-				Logger.log("Rebuild was successful")
-			} else {
-				Logger.log("ERROR (rebuilding rules): \(error?.debugDescription)")
-			}
-
-			if dataIsNew {
-				self.completionHandler(.NewData)
-			} else {
-				self.completionHandler(.NoData);
-			}
-		})
+		BlockListUpdater.saveAndRecompileNewBlockListData(newData!, completionHandler:self.completionHandler)
 	}
 }

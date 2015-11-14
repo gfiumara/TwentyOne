@@ -44,12 +44,14 @@ public class BackgroundDownloader: NSObject, NSURLSessionTaskDelegate, NSURLSess
 		let newData = NSData.init(contentsOfURL:temporaryURL)
 		if newData == nil {
 			Logger.log("Newly downloaded data was nil")
+			self.completionHandler(.Failed)
 			return
 		}
 
 		let newDataString = NSString.init(data:newData!, encoding:NSUTF8StringEncoding)
 		if newDataString == nil {
 			Logger.log("Newly downloaded data string was nil")
+			self.completionHandler(.Failed)
 			return
 		}
 

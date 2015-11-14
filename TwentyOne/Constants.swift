@@ -16,6 +16,7 @@ struct Constants
 	static let SettingsAppURL = NSURL.init(string:"prefs://")!
 	static let ContentBlockerBundleID = "com.gregfiumara.twentyone.contentblocker"
 	static let BlockerListNameKey = "blockerList"
+	static let JSONExtension = "json"
 	static let BlockerListRetrievedDateKey = "BlockerListRetrievedDate"
 	static let BlockerListUpdatedDateKey = "BlockerListUpdatedDate"
 }

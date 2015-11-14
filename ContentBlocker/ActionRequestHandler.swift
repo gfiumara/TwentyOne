@@ -22,12 +22,11 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
 			item.attachments = [attachment]
 			context.completeRequestReturningItems([item], completionHandler:nil)
 		} else {
-			let attachment = NSItemProvider(contentsOfURL: NSBundle.mainBundle().URLForResource(Constants.BlockerListNameKey, withExtension:kUTTypeJSON as String!))!
+			let attachment = NSItemProvider(contentsOfURL: NSBundle.mainBundle().URLForResource(Constants.BlockerListNameKey, withExtension:Constants.JSONExtension))!
 			let item = NSExtensionItem()
 			item.attachments = [attachment]
 			context.completeRequestReturningItems([item], completionHandler: nil);
 		}
-
 	}
 
 }

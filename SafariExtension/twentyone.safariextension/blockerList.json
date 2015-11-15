@@ -196,5 +196,15 @@
  	"trigger": {
  		"url-filter": "rogue.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".ui-widget-overlay, .ui-dialog"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "fullsailbrewing.com"
+ 	}
 }
 ]

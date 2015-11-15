@@ -216,5 +216,15 @@
  	"trigger": {
  		"url-filter": "uintabrewing.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".ageverify"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "bearrepublic.com"
+ 	}
 }
 ]

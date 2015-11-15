@@ -176,5 +176,15 @@
  	"trigger": {
  		"url-filter": "greatlakesbrewing.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#fancybox-overlay, #fancybox-wrap"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "summitbrewing.com"
+ 	}
 }
 ]

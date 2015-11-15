@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		08292F111BF7D82D0055F357 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 08292F0F1BF7D8260055F357 /* blockerList.json */; };
-		08F02EC61BF563B100B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
-		08F02EEF1BF56CCB00B5E57E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319C1BF3F93600D30625 /* Constants.swift */; };
-		08F02EF01BF56CCB00B5E57E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EC51BF563B100B5E57E /* Logger.swift */; };
+		08292F191BF8CFCD0055F357 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F171BF8CFCD0055F357 /* Constants.swift */; };
+		08292F1A1BF8CFCD0055F357 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F181BF8CFCD0055F357 /* Logger.swift */; };
+		08292F1D1BF8CFD60055F357 /* BackgroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F1B1BF8CFD60055F357 /* BackgroundDownloader.swift */; };
+		08292F1E1BF8CFD60055F357 /* ForegroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F1C1BF8CFD60055F357 /* ForegroundDownloader.swift */; };
 		08F02EF21BF6C3E800B5E57E /* BlockListUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */; };
 		08F9669C1BF799EB007C9E2A /* SafariStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */; };
 		08F9669F1BF79A43007C9E2A /* SettingsStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9669E1BF79A43007C9E2A /* SettingsStepIconView.swift */; };
@@ -18,7 +19,6 @@
 		08F966A31BF79A7C007C9E2A /* TwentyOneStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966A21BF79A7C007C9E2A /* TwentyOneStepIconView.swift */; };
 		08F966A91BF7A43A007C9E2A /* ProceduralImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */; };
 		08F966AB1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */; };
-		08F966AD1BF7AD6E007C9E2A /* ForegroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F966AC1BF7AD6E007C9E2A /* ForegroundDownloader.swift */; };
 		08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31761BF3D2F900D30625 /* AppDelegate.swift */; };
 		08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31781BF3D2F900D30625 /* ViewController.swift */; };
 		08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317A1BF3D2F900D30625 /* Main.storyboard */; };
@@ -26,8 +26,6 @@
 		08FD31811BF3D2F900D30625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FD317F1BF3D2F900D30625 /* LaunchScreen.storyboard */; };
 		08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */; };
 		08FD31951BF3D3D400D30625 /* TwentyOneContentBlocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		08FD319B1BF3F83400D30625 /* BackgroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */; };
-		08FD319D1BF3F93600D30625 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD319C1BF3F93600D30625 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +54,10 @@
 
 /* Begin PBXFileReference section */
 		08292F0F1BF7D8260055F357 /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = blockerList.json; path = SafariExtension/twentyone.safariextension/blockerList.json; sourceTree = SOURCE_ROOT; };
-		08F02EC51BF563B100B5E57E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		08292F171BF8CFCD0055F357 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = support/Constants.swift; sourceTree = "<group>"; };
+		08292F181BF8CFCD0055F357 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = support/Logger.swift; sourceTree = "<group>"; };
+		08292F1B1BF8CFD60055F357 /* BackgroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundDownloader.swift; path = downloading/BackgroundDownloader.swift; sourceTree = "<group>"; };
+		08292F1C1BF8CFD60055F357 /* ForegroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForegroundDownloader.swift; path = downloading/ForegroundDownloader.swift; sourceTree = "<group>"; };
 		08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockListUpdater.swift; sourceTree = "<group>"; };
 		08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SafariStepIconView.swift; path = iconViews/SafariStepIconView.swift; sourceTree = "<group>"; };
 		08F9669E1BF79A43007C9E2A /* SettingsStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsStepIconView.swift; path = iconViews/SettingsStepIconView.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		08F966A21BF79A7C007C9E2A /* TwentyOneStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwentyOneStepIconView.swift; path = iconViews/TwentyOneStepIconView.swift; sourceTree = "<group>"; };
 		08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduralImages.swift; sourceTree = "<group>"; };
 		08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwentyOneHeaderIconView.swift; path = iconViews/TwentyOneHeaderIconView.swift; sourceTree = "<group>"; };
-		08F966AC1BF7AD6E007C9E2A /* ForegroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForegroundDownloader.swift; sourceTree = "<group>"; };
 		08FD31731BF3D2F900D30625 /* Twenty One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twenty One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FD31761BF3D2F900D30625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08FD31781BF3D2F900D30625 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,10 +75,8 @@
 		08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TwentyOneContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		08FD31921BF3D3D400D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundDownloader.swift; sourceTree = "<group>"; };
-		08FD319C1BF3F93600D30625 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		08FD319E1BF408AF00D30625 /* Twenty One.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Twenty One.entitlements"; sourceTree = "<group>"; };
-		08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TwentyOneContentBlocker.entitlements; sourceTree = "<group>"; };
+		08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = TwentyOneContentBlocker.entitlements; path = ../TwentyOneContentBlocker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08F9669D1BF799F2007C9E2A /* iconViews */ = {
+		08292F121BF8CEF50055F357 /* Downloading */ = {
+			isa = PBXGroup;
+			children = (
+				08292F1B1BF8CFD60055F357 /* BackgroundDownloader.swift */,
+				08292F1C1BF8CFD60055F357 /* ForegroundDownloader.swift */,
+			);
+			name = Downloading;
+			sourceTree = "<group>";
+		};
+		08292F131BF8CF020055F357 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				08292F171BF8CFCD0055F357 /* Constants.swift */,
+				08292F181BF8CFCD0055F357 /* Logger.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		08292F141BF8CF170055F357 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				08FD317D1BF3D2F900D30625 /* Assets.xcassets */,
+				08FD317F1BF3D2F900D30625 /* LaunchScreen.storyboard */,
+				08FD317A1BF3D2F900D30625 /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		08292F161BF8CF410055F357 /* Build Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				08FD31821BF3D2F900D30625 /* Info.plist */,
+				08FD319E1BF408AF00D30625 /* Twenty One.entitlements */,
+			);
+			name = "Build Stuff";
+			sourceTree = "<group>";
+		};
+		08F9669D1BF799F2007C9E2A /* Icon Views */ = {
 			isa = PBXGroup;
 			children = (
 				08F966A81BF7A43A007C9E2A /* ProceduralImages.swift */,
@@ -109,13 +144,12 @@
 				08F966AA1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift */,
 				08F966A01BF79A61007C9E2A /* ContentBlockerStepIconView.swift */,
 			);
-			name = iconViews;
+			name = "Icon Views";
 			sourceTree = "<group>";
 		};
 		08FD316A1BF3D2F900D30625 = {
 			isa = PBXGroup;
 			children = (
-				08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */,
 				08FD31751BF3D2F900D30625 /* TwentyOne */,
 				08FD318D1BF3D3D400D30625 /* ContentBlocker */,
 				08FD31741BF3D2F900D30625 /* Products */,
@@ -134,19 +168,14 @@
 		08FD31751BF3D2F900D30625 /* TwentyOne */ = {
 			isa = PBXGroup;
 			children = (
-				08F9669D1BF799F2007C9E2A /* iconViews */,
-				08FD319E1BF408AF00D30625 /* Twenty One.entitlements */,
 				08FD31761BF3D2F900D30625 /* AppDelegate.swift */,
-				08FD319C1BF3F93600D30625 /* Constants.swift */,
 				08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */,
-				08F966AC1BF7AD6E007C9E2A /* ForegroundDownloader.swift */,
-				08FD319A1BF3F83400D30625 /* BackgroundDownloader.swift */,
 				08FD31781BF3D2F900D30625 /* ViewController.swift */,
-				08FD317A1BF3D2F900D30625 /* Main.storyboard */,
-				08FD317D1BF3D2F900D30625 /* Assets.xcassets */,
-				08FD317F1BF3D2F900D30625 /* LaunchScreen.storyboard */,
-				08FD31821BF3D2F900D30625 /* Info.plist */,
-				08F02EC51BF563B100B5E57E /* Logger.swift */,
+				08292F161BF8CF410055F357 /* Build Stuff */,
+				08292F121BF8CEF50055F357 /* Downloading */,
+				08F9669D1BF799F2007C9E2A /* Icon Views */,
+				08292F131BF8CF020055F357 /* Support */,
+				08292F141BF8CF170055F357 /* UI */,
 			);
 			path = TwentyOne;
 			sourceTree = "<group>";
@@ -156,6 +185,7 @@
 			children = (
 				08292F0F1BF7D8260055F357 /* blockerList.json */,
 				08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */,
+				08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */,
 				08FD31921BF3D3D400D30625 /* Info.plist */,
 			);
 			path = ContentBlocker;
@@ -278,19 +308,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08F02EC61BF563B100B5E57E /* Logger.swift in Sources */,
+				08292F1D1BF8CFD60055F357 /* BackgroundDownloader.swift in Sources */,
 				08F9669C1BF799EB007C9E2A /* SafariStepIconView.swift in Sources */,
-				08FD319B1BF3F83400D30625 /* BackgroundDownloader.swift in Sources */,
 				08F966A91BF7A43A007C9E2A /* ProceduralImages.swift in Sources */,
 				08F9669F1BF79A43007C9E2A /* SettingsStepIconView.swift in Sources */,
 				08F966A11BF79A61007C9E2A /* ContentBlockerStepIconView.swift in Sources */,
 				08F966AB1BF7A499007C9E2A /* TwentyOneHeaderIconView.swift in Sources */,
 				08FD31791BF3D2F900D30625 /* ViewController.swift in Sources */,
 				08FD31771BF3D2F900D30625 /* AppDelegate.swift in Sources */,
-				08F966AD1BF7AD6E007C9E2A /* ForegroundDownloader.swift in Sources */,
+				08292F1A1BF8CFCD0055F357 /* Logger.swift in Sources */,
+				08292F1E1BF8CFD60055F357 /* ForegroundDownloader.swift in Sources */,
 				08F966A31BF79A7C007C9E2A /* TwentyOneStepIconView.swift in Sources */,
-				08FD319D1BF3F93600D30625 /* Constants.swift in Sources */,
 				08F02EF21BF6C3E800B5E57E /* BlockListUpdater.swift in Sources */,
+				08292F191BF8CFCD0055F357 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */,
-				08F02EF01BF56CCB00B5E57E /* Logger.swift in Sources */,
-				08F02EEF1BF56CCB00B5E57E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

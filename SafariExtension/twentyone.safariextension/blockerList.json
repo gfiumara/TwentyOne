@@ -116,5 +116,15 @@
 	"trigger": {
 		"url-filter": "bellsbeer.com"
 	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".overlay, .language-landing-page"
+	},
+	"trigger": {
+		"url-filter": "duvel.com"
+	}
 }
 ]

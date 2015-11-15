@@ -1,0 +1,40 @@
+TwentyOne
+=========
+A content blocker for alcohol age gates for Safari on iOS and OS X.
+
+Download
+--------
+ * [OS X Safari Extension](SafariExtension/twentyone.safariextz)
+ * iOS App Store (*coming soon*)
+
+![Before and after with Twenty One](assets/screenshots/beforeAfter.png)
+
+You're drinking a World Wide Stout from Dogfish and you want to know what the 
+ABV was when it was bottled. Over to [Dogfish.com](http://dogfish.com) you go. 
+**UGH!**  Before you can get to the information you want, you get to play the
+"enter your birthday" game on your tiny iPhone screen, after having a 15%+ beer.
+
+That's where Twenty One can help. Using an open-source, auto-updating block
+list, *many* age gates will be blocked from appearing in Safari (and 
+SafariViewControllers) on your iPhone and Mac. Now you can get to the 
+information you really want without delay.
+
+Why doesn't Twenty One work with [Insert Website Here]?
+-------------------------------------------------------
+ * No one has added that website yet.
+ * The website uses cookies to track your age.
+ * The website combines other functionality into the age gating, where disabling
+   the age gate would make the website not function correctly.
+
+How can I help?
+---------------
+If you know the basics of CSS and find a site you can fix, please submit a 
+[pull request](pulls) to 
+[blockerList.json](SafariExtension/twentyone.safariextension/blockerList.json).
+If you don't know what you're doing, feel free to [submit an issue](issues)
+after confirming that your site has not already been requested. Many thanks to
+the generous [contributors](graphs/contributors) who have already helped!
+
+![screenshot](assets/screenshots/fourInch.png)
+
+Cheers!

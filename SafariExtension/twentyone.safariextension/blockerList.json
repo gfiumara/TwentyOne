@@ -146,5 +146,15 @@
  	"trigger": {
  		"url-filter": "harpoonbrewery.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#cboxOverlay, #colorbox"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "sweetwaterbrew.com"
+ 	}
 }
 ]

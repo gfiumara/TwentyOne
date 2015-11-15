@@ -156,5 +156,15 @@
  	"trigger": {
  		"url-filter": "sweetwaterbrew.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".popmake-content, #popmake-overlay"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "alaskanbeer.com"
+ 	}
 }
 ]

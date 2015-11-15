@@ -126,5 +126,15 @@
 	"trigger": {
 		"url-filter": "duvel.com"
 	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#av-overlay-wrap"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "saranac.com"
+ 	}
 }
 ]

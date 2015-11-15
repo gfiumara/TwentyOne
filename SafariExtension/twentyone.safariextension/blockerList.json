@@ -136,5 +136,15 @@
  	"trigger": {
  		"url-filter": "saranac.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".Splash-Viewport"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "harpoonbrewery.com"
+ 	}
 }
 ]

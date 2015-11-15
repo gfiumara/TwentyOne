@@ -206,5 +206,15 @@
  	"trigger": {
  		"url-filter": "fullsailbrewing.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#age_verify"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "uintabrewing.com"
+ 	}
 }
 ]

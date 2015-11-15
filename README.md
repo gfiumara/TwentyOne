@@ -4,7 +4,7 @@ A content blocker for alcohol age gates for Safari on iOS and OS X.
 
 Download
 --------
- * [OS X Safari Extension](SafariExtension/twentyone.safariextz)
+ * [OS X Safari Extension](https://raw.githubusercontent.com/gfiumara/TwentyOne/master/SafariExtension/twentyone.safariextz)
  * iOS App Store (*coming soon*)
 
 ![Before and after with Twenty One](assets/screenshots/beforeAfter.png)
@@ -36,6 +36,6 @@ If you don't know what you're doing, feel free to
 after confirming that your site has not already been requested. Many thanks to
 the generous
 [contributors](https://github.com/gfiumara/TwentyOne/graphs/contributors)
-who  have already helped!
+who have already helped!
 
 Cheers!

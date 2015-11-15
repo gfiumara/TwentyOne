@@ -10,7 +10,7 @@ struct Constants
 {
 	static let BackgroundSessionID = "com.gregfiumara.twentyone.backgroundDownload"
 	static let AppGroupID = "group.com.gregfiumara.twentyone"
-	static let BlockListURL:NSURL = NSURL.init(string:"https://api.gregfiumara.com/blockerList.json")!
+	static let BlockListURL:NSURL = NSURL.init(string:"https://raw.githubusercontent.com/gfiumara/TwentyOne/master/SafariExtension/twentyone.safariextension/blockerList.json")!
 	static let SettingsAppURL = NSURL.init(string:"prefs://")!
 	static let ContentBlockerBundleID = "com.gregfiumara.twentyone.contentblocker"
 	static let BlockerListNameKey = "blockerList"

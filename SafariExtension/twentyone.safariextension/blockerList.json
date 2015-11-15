@@ -166,5 +166,15 @@
  	"trigger": {
  		"url-filter": "alaskanbeer.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#block-block-12"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "greatlakesbrewing.com"
+ 	}
 }
 ]

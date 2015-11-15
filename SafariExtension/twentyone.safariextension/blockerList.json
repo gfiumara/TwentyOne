@@ -42,6 +42,26 @@
 	"action": {
 		"type": "css-display-none",
 		"resource-type": "document",
+		"selector": "#av-overlay-wrap"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "stgbeer.com"
+ 	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#av-overlay-wrap"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "dbbrewingcompany.com"
+ 	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
 		"selector": ".overlay"
  	},
  	"trigger": {

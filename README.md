@@ -1,6 +1,6 @@
 Twenty One
 ==========
-A content blocker for alcohol age gates for Safari on iOS and OS X.
+A Safari content blocker for age gates on iOS and OS X.
 
 Download
 --------

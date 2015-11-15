@@ -1,5 +1,5 @@
-TwentyOne
-=========
+Twenty One
+==========
 A content blocker for alcohol age gates for Safari on iOS and OS X.
 
 Download
@@ -29,12 +29,13 @@ Why doesn't Twenty One work with [Insert Website Here]?
 How can I help?
 ---------------
 If you know the basics of CSS and find a site you can fix, please submit a 
-[pull request](pulls) to 
+[pull request](https://github.com/gfiumara/TwentyOne/pulls) to 
 [blockerList.json](SafariExtension/twentyone.safariextension/blockerList.json).
-If you don't know what you're doing, feel free to [submit an issue](issues)
+If you don't know what you're doing, feel free to
+[submit an issue](https://github.com/gfiumara/TwentyOne/issues)
 after confirming that your site has not already been requested. Many thanks to
-the generous [contributors](graphs/contributors) who have already helped!
-
-![screenshot](assets/screenshots/fourInch.png)
+the generous
+[contributors](https://github.com/gfiumara/TwentyOne/graphs/contributors)
+who  have already helped!
 
 Cheers!

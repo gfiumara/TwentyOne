@@ -1,10 +1,8 @@
-//
-//  TwentyOneHeaderIconView.swift
-//  TwentyOne
-//
-//  Created by Greg Fiumara on 11/14/15.
-//  Copyright © 2015 Greg Fiumara. All rights reserved.
-//
+/*
+ * TwentyOneHeaderIconView.swift
+ * Part of http://github.com/gfiumara/TwentyOne by Gregory Fiumara.
+ * See LICENSE for details.
+ */
 
 import UIKit
 

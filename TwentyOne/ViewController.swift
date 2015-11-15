@@ -1,10 +1,8 @@
-//
-//  ViewController.swift
-//  TwentyOne
-//
-//  Created by Greg Fiumara on 11/11/15.
-//  Copyright © 2015 Greg Fiumara. All rights reserved.
-//
+/*
+ * ViewController.swift
+ * Part of http://github.com/gfiumara/TwentyOne by Gregory Fiumara.
+ * See LICENSE for details.
+ */
 
 import UIKit
 
@@ -67,6 +65,10 @@ class ViewController: UIViewController {
 		if UIApplication.sharedApplication().canOpenURL(Constants.SettingsAppURL) {
 			UIApplication.sharedApplication().openURL(Constants.SettingsAppURL)
 		}
+	}
+
+	override func prefersStatusBarHidden() -> Bool {
+		return true
 	}
 
 	@IBAction func forceUpdateButtonPressed(button:UIButton)

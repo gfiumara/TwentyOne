@@ -1,10 +1,8 @@
-//
-//  Constants.swift
-//  TwentyOne
-//
-//  Created by Greg Fiumara on 11/11/15.
-//  Copyright © 2015 Greg Fiumara. All rights reserved.
-//
+/*
+ * Constants.swift
+ * Part of http://github.com/gfiumara/TwentyOne by Gregory Fiumara.
+ * See LICENSE for details.
+ */
 
 import Foundation
 

@@ -57,5 +57,24 @@
 	"trigger": {
 		"url-filter": "samueladams.com"
 	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#age_gate"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "malts.com"
+ 	}
+},
+{
+	"action": {
+		"type": "block",
+		"resource-type": "script"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "malts.com/agegate*"
+ 	}
 }
 ]

@@ -1,10 +1,8 @@
-//
-//  BlockListUpdater.swift
-//  TwentyOne
-//
-//  Created by Greg Fiumara on 11/13/15.
-//  Copyright © 2015 Greg Fiumara. All rights reserved.
-//
+/*
+ * BlockListUpdater.swift
+ * Part of http://github.com/gfiumara/TwentyOne by Gregory Fiumara.
+ * See LICENSE for details.
+ */
 
 import SafariServices
 import UIKit

@@ -12,6 +12,9 @@
 		08292F1A1BF8CFCD0055F357 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F181BF8CFCD0055F357 /* Logger.swift */; };
 		08292F1D1BF8CFD60055F357 /* BackgroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F1B1BF8CFD60055F357 /* BackgroundDownloader.swift */; };
 		08292F1E1BF8CFD60055F357 /* ForegroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F1C1BF8CFD60055F357 /* ForegroundDownloader.swift */; };
+		08292F201BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08292F1F1BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements */; };
+		08292F241BF8D0A50055F357 /* TwentyOne.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08292F231BF8D0A50055F357 /* TwentyOne.entitlements */; };
+		08292F251BF8D0BB0055F357 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F171BF8CFCD0055F357 /* Constants.swift */; };
 		08F02EF21BF6C3E800B5E57E /* BlockListUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */; };
 		08F9669C1BF799EB007C9E2A /* SafariStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */; };
 		08F9669F1BF79A43007C9E2A /* SettingsStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9669E1BF79A43007C9E2A /* SettingsStepIconView.swift */; };
@@ -58,6 +61,8 @@
 		08292F181BF8CFCD0055F357 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = support/Logger.swift; sourceTree = "<group>"; };
 		08292F1B1BF8CFD60055F357 /* BackgroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundDownloader.swift; path = downloading/BackgroundDownloader.swift; sourceTree = "<group>"; };
 		08292F1C1BF8CFD60055F357 /* ForegroundDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForegroundDownloader.swift; path = downloading/ForegroundDownloader.swift; sourceTree = "<group>"; };
+		08292F1F1BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = TwentyOneContentBlocker.entitlements; path = TwentyOne/entitlements/TwentyOneContentBlocker.entitlements; sourceTree = SOURCE_ROOT; };
+		08292F231BF8D0A50055F357 /* TwentyOne.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = TwentyOne.entitlements; path = entitlements/TwentyOne.entitlements; sourceTree = "<group>"; };
 		08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockListUpdater.swift; sourceTree = "<group>"; };
 		08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SafariStepIconView.swift; path = iconViews/SafariStepIconView.swift; sourceTree = "<group>"; };
 		08F9669E1BF79A43007C9E2A /* SettingsStepIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsStepIconView.swift; path = iconViews/SettingsStepIconView.swift; sourceTree = "<group>"; };
@@ -75,8 +80,6 @@
 		08FD318C1BF3D3D400D30625 /* TwentyOneContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TwentyOneContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		08FD31921BF3D3D400D30625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08FD319E1BF408AF00D30625 /* Twenty One.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Twenty One.entitlements"; sourceTree = "<group>"; };
-		08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = TwentyOneContentBlocker.entitlements; path = ../TwentyOneContentBlocker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +131,8 @@
 		08292F161BF8CF410055F357 /* Build Stuff */ = {
 			isa = PBXGroup;
 			children = (
+				08292F231BF8D0A50055F357 /* TwentyOne.entitlements */,
 				08FD31821BF3D2F900D30625 /* Info.plist */,
-				08FD319E1BF408AF00D30625 /* Twenty One.entitlements */,
 			);
 			name = "Build Stuff";
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 			children = (
 				08292F0F1BF7D8260055F357 /* blockerList.json */,
 				08FD31901BF3D3D400D30625 /* ActionRequestHandler.swift */,
-				08FD319F1BF408D300D30625 /* TwentyOneContentBlocker.entitlements */,
+				08292F1F1BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements */,
 				08FD31921BF3D3D400D30625 /* Info.plist */,
 			);
 			path = ContentBlocker;
@@ -287,6 +290,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08292F241BF8D0A50055F357 /* TwentyOne.entitlements in Resources */,
+				08292F201BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements in Resources */,
 				08FD31811BF3D2F900D30625 /* LaunchScreen.storyboard in Resources */,
 				08FD317E1BF3D2F900D30625 /* Assets.xcassets in Resources */,
 				08FD317C1BF3D2F900D30625 /* Main.storyboard in Resources */,
@@ -329,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FD31911BF3D3D400D30625 /* ActionRequestHandler.swift in Sources */,
+				08292F251BF8D0BB0055F357 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "TwentyOne/Twenty One.entitlements";
+				CODE_SIGN_ENTITLEMENTS = TwentyOne/entitlements/TwentyOne.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -474,7 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "TwentyOne/Twenty One.entitlements";
+				CODE_SIGN_ENTITLEMENTS = TwentyOne/entitlements/TwentyOne.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -490,7 +496,7 @@
 		08FD31971BF3D3D400D30625 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = TwentyOneContentBlocker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TwentyOne/entitlements/TwentyOneContentBlocker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContentBlocker/Info.plist;
@@ -506,7 +512,7 @@
 		08FD31981BF3D3D400D30625 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = TwentyOneContentBlocker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TwentyOne/entitlements/TwentyOneContentBlocker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContentBlocker/Info.plist;

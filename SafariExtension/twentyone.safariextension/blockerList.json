@@ -106,5 +106,15 @@
 	"trigger": {
 		"url-filter": "foundersbrewing.com"
 	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#lightBoxOverlayWrapper"
+	},
+	"trigger": {
+		"url-filter": "bellsbeer.com"
+	}
 }
 ]

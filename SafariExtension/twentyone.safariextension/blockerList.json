@@ -256,5 +256,15 @@
  	"trigger": {
  		"url-filter": "narragansettbeer.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#age-notification"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "brewgentlemen.com"
+ 	}
 }
 ]

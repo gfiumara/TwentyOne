@@ -246,5 +246,15 @@
  	"trigger": {
  		"url-filter": "karlstrauss.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#body-hider, #body-hider-full, #av-overlay-wrap"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "narragansettbeer.com"
+ 	}
 }
 ]

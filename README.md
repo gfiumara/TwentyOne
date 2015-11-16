@@ -19,8 +19,12 @@ list, *many* age gates will be blocked from appearing in Safari (and
 SafariViewControllers) on your iPhone and Mac. Now you can get to the 
 information you really want without delay.
 
-Why doesn't Twenty One work with [Insert Website Here]?
--------------------------------------------------------
+Why doesn't Twenty One work with [Website]?
+-------------------------------------------
+It could be that we haven't looked at the website yet
+([request it](https://github.com/gfiumara/TwentyOne/issues))! There is a
+[list of known unsupported websites](UNSUPPORTED.md) that you should browse 
+first.  The reasons boil down to:
  * No one has added that website yet.
  * The website uses cookies to track your age.
  * The website combines other functionality into the age gating, where disabling

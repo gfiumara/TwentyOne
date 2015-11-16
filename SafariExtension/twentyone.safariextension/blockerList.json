@@ -236,5 +236,15 @@
  	"trigger": {
  		"url-filter": "lefthandbrewing.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#age-checker-wrapper"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "karlstrauss.com"
+ 	}
 }
 ]

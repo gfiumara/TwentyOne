@@ -266,5 +266,15 @@
  	"trigger": {
  		"url-filter": "brewgentlemen.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#gateWrapper"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "redhook.com"
+ 	}
 }
 ]

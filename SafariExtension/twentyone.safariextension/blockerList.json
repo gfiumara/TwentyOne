@@ -274,7 +274,7 @@
 		"selector": "#gateWrapper"
  	},
  	"trigger": {
- 		"url-filter": "redhook.com"
+ 		"url-filter": "http://redhook.com"
  	}
 }
 ]

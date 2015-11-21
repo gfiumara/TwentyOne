@@ -5,7 +5,7 @@ A Safari content blocker for age gates on iOS and OS X.
 Download
 --------
  * [OS X Safari Extension](https://raw.githubusercontent.com/gfiumara/TwentyOne/master/SafariExtension/twentyone.safariextz)
- * iOS App Store (*coming soon*)
+ * [iOS App Store](https://itunes.apple.com/us/app/twenty-one-block-age-gates/id1059178930?ls=1&mt=8&at=10l73r)
 
 ![Before and after with Twenty One](assets/screenshots/beforeAfter.png)
 

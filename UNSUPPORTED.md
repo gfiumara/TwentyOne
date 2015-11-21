@@ -27,6 +27,7 @@ If you encounter a site where this is the case, please update the list below.
 | [Ninkasi](http://www.ninkasibrewing.com/) | Cookie + Redirect | | 11/15/2015 |
 | [Odell](http://odellbrewing.com) | CSS | Class on root element | 11/15/2015 |
 | [Oskar Blues](http://www.oskarblues.com) | Cookie + CSS | Class on all elements | 11/15/2015 |
+| [Other Half](http://www.otherhalfbrewing.com) | Redirect | | 11/21/2015 |
 | [Otter Creek](http://ottercreekbrewing.com) | Cookie + Redirect | | 11/15/2015 |
 | [Stevens Point](http://www.pointbeer.com/) | Cookie + Redirect | | 11/15/2015 |
 | [Stone](http://www.stonebrewing.com/) | CSS | Class on body | 11/15/2015 |

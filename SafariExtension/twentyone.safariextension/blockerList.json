@@ -276,8 +276,7 @@
  	"trigger": {
  		"url-filter": "http://redhook.com"
  	}
-}
-,
+},
 {
 	"action": {
 		"type": "css-display-none",
@@ -286,6 +285,34 @@
  	},
  	"trigger": {
  		"url-filter": "dcbrau.com"
+ 	}
+},
+{
+	"action": {
+		"type": "block",
+		"resource-type": "script"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "stonebrewing.com/sites/default/files/js/js_XfUAp6denszyPS-JTyOhER0waRLp8TzkNHQg7M5V5zQ.js"
+ 	}
+},
+{
+	"action": {
+		"type": "block",
+		"resource-type": "script"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "stonebrewing.com/sites/default/files/js/js_7sx4mn86YTkGjRmAvswXhBOfLV1pK8eCVYoJkZpeDsQ.js"
+ 	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#stone-age-gate"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "stonebrewing.com"
  	}
 }
 ]

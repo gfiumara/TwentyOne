@@ -30,5 +30,4 @@ If you encounter a site where this is the case, please update the list below.
 | [Other Half](http://www.otherhalfbrewing.com) | Redirect | | 11/21/2015 |
 | [Otter Creek](http://ottercreekbrewing.com) | Cookie + Redirect | | 11/15/2015 |
 | [Stevens Point](http://www.pointbeer.com/) | Cookie + Redirect | | 11/15/2015 |
-| [Stone](http://www.stonebrewing.com/) | CSS | Class on body | 11/15/2015 |
 | [Yuengling](http://yuengling.com) | Cookie + Redirect | | 11/15/2015 |

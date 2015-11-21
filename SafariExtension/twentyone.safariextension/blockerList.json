@@ -277,4 +277,15 @@
  		"url-filter": "http://redhook.com"
  	}
 }
+,
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".tmask, .tbox"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "dcbrau.com"
+ 	}
+}
 ]

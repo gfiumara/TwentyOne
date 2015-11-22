@@ -14,7 +14,8 @@ class ViewController: UIViewController {
 	@IBOutlet weak var listLastCheckedLabel: UILabel!
 	@IBOutlet weak var enableTwentyOneLabel: UILabel!
 	@IBOutlet weak var forceUpdateButton: UIButton!
-
+	@IBOutlet weak var openSettingsAppButton: UIButton!
+	
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
 		}
 
 		self.subheadLabel.text = "Follow these instructions to block age gates on many alcohol-related websites."
+
+		self.openSettingsAppButton.enabled = UIApplication.sharedApplication().canOpenURL(Constants.SettingsAppURL)
 
 		self.updateDates()
 	}

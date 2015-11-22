@@ -37,14 +37,14 @@
                                 <rect key="frame" x="72" y="526" width="176.5" height="13.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last check for list updates on November 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPv-Sk-vim">
-                                <rect key="frame" x="46.5" y="546.5" width="227.5" height="13.5"/>
+                                <rect key="frame" x="46" y="546" width="227.5" height="13.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-Se-Xdw">
@@ -72,9 +72,13 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-7Z-oY4">
-                                                <rect key="frame" x="85" y="5" width="154" height="30"/>
+                                                <rect key="frame" x="85" y="4" width="163" height="32"/>
                                                 <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Open the Settings app"/>
+                                                <state key="disabled" title="Open the Settings app">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="openSettingsAppButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8V-Nn-rYm"/>
                                                 </connections>
@@ -91,13 +95,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q33-I2-KYa">
-                                        <rect key="frame" x="0.0" y="47.5" width="288" height="40"/>
+                                        <rect key="frame" x="0.0" y="47" width="288" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Safari" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P7-5k-ONG">
                                                 <rect key="frame" x="85" y="11" width="73" height="19.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="mNa-RQ-h2K" customClass="SafariStepIconView" customModule="Twenty_One" customModuleProvider="target">
@@ -121,13 +125,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90V-RA-Yca">
-                                        <rect key="frame" x="0.0" y="94.5" width="288" height="40"/>
+                                        <rect key="frame" x="0.0" y="94" width="288" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Content Blockers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kou-wC-KlU">
-                                                <rect key="frame" x="85" y="10.5" width="155.5" height="19.5"/>
+                                                <rect key="frame" x="85" y="10" width="155.5" height="19.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="nxf-nY-ens" customClass="ContentBlockerStepIconView" customModule="Twenty_One" customModuleProvider="target">
@@ -157,7 +161,7 @@
                                                 <rect key="frame" x="85" y="11" width="139.5" height="19.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="UXY-f2-lGo" customClass="TwentyOneStepIconView" customModule="Twenty_One" customModuleProvider="target">
@@ -228,6 +232,7 @@
                         <outlet property="headLabel" destination="IKS-Wm-9VB" id="OL2-oW-cXm"/>
                         <outlet property="listLastCheckedLabel" destination="NPv-Sk-vim" id="kt6-8i-lKe"/>
                         <outlet property="listLastUpdatedLabel" destination="Yeg-2z-p88" id="qHn-vK-jYm"/>
+                        <outlet property="openSettingsAppButton" destination="Udc-7Z-oY4" id="WRC-qz-zsd"/>
                         <outlet property="subheadLabel" destination="oKq-ze-opV" id="73p-ht-cpl"/>
                     </connections>
                 </viewController>

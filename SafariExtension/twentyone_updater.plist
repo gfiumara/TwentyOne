@@ -10,9 +10,9 @@
 			<key>Developer Identifier</key>
 			<string>SELUQ362Q4</string>
 			<key>CFBundleVersion</key>
-			<string>1</string>
+			<string>3</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.0</string>
+			<string>1.0.1</string>
 			<key>URL</key>
 			<string>https://raw.githubusercontent.com/gfiumara/TwentyOne/master/SafariExtension/twentyone.safariextz</string>
 		</dict>

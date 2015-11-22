@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 		var dateFormatter:NSDateFormatter? = nil
 		dispatch_once(&onceToken) {
 			dateFormatter = NSDateFormatter()
-			dateFormatter?.dateStyle = .LongStyle
+			dateFormatter?.dateStyle = .MediumStyle
 			dateFormatter?.timeStyle = .ShortStyle
 			dateFormatter?.doesRelativeDateFormatting = true
 		}

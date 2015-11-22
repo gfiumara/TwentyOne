@@ -82,25 +82,6 @@
 	"action": {
 		"type": "css-display-none",
 		"resource-type": "document",
-		"selector": "#age_gate"
- 	},
- 	"trigger": {
- 		"url-filter": "malts.com"
- 	}
-},
-{
-	"action": {
-		"type": "block",
-		"resource-type": "script"
- 	},
- 	"trigger": {
- 		"url-filter": "malts.com/agegate*"
- 	}
-},
-{
-	"action": {
-		"type": "css-display-none",
-		"resource-type": "document",
 		"selector": "#age-gate-overlay-wrap"
 	},
 	"trigger": {

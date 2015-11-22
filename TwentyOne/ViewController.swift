@@ -70,8 +70,9 @@ class ViewController: UIViewController {
 		}
 	}
 
-	override func prefersStatusBarHidden() -> Bool {
-		return true
+	override func prefersStatusBarHidden() -> Bool
+	{
+		return (false)
 	}
 
 	@IBAction func forceUpdateButtonPressed(button:UIButton)

@@ -1,5 +1,3 @@
-![Twenty One Icon](assets/extensionGalleryIcon.png)
-
 Twenty One
 ==========
 A Safari content blocker for age gates on iOS and OS X.

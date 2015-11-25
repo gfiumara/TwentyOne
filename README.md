@@ -1,3 +1,5 @@
+![Twenty One Icon](assets/extensionGalleryIcon.png)
+
 Twenty One
 ==========
 A Safari content blocker for age gates on iOS and OS X.
@@ -7,7 +9,7 @@ Download
  * [OS X Safari Extension](https://raw.githubusercontent.com/gfiumara/TwentyOne/master/SafariExtension/twentyone.safariextz)
  * [iOS App Store](https://itunes.apple.com/us/app/twenty-one-block-age-gates/id1059178930?ls=1&mt=8&at=10l73r)
 
-![Before and after with Twenty One](assets/screenshots/beforeAfter.png)
+![Before and after with Twenty One](assets/screenshots/iOS_beforeAfter.png)
 
 You're drinking a World Wide Stout from Dogfish and you want to know what the 
 ABV was when it was bottled. Over to [Dogfish.com](http://dogfish.com) you go. 

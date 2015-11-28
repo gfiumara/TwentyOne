@@ -295,5 +295,15 @@
  	"trigger": {
  		"url-filter": "stonebrewing.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": ".FloatingContainer"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "beeradvocate.com"
+ 	}
 }
 ]

@@ -305,5 +305,15 @@
  	"trigger": {
  		"url-filter": "beeradvocate.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#cookie-law-info-bar"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "prairieales.com"
+ 	}
 }
 ]

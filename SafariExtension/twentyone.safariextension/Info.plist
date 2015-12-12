@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Greg Fiumara</string>
 	<key>Builder Version</key>
-	<string>11601.2.7.2</string>
+	<string>11601.3.9</string>
 	<key>CFBundleDisplayName</key>
 	<string>Twenty One</string>
 	<key>CFBundleIdentifier</key>
@@ -27,11 +27,11 @@
 	<string>SELUQ362Q4</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
+	<key>Update From Gallery</key>
+	<true/>
 	<key>Update Manifest URL</key>
 	<string>https://raw.githubusercontent.com/gfiumara/TwentyOne/master/SafariExtension/twentyone_updater.plist</string>
 	<key>Website</key>
 	<string>http://gregfiumara.com</string>
-	<key>Update From Gallery</key>
-	<true/>
 </dict>
 </plist>

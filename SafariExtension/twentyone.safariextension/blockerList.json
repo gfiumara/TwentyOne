@@ -325,5 +325,15 @@
  	"trigger": {
  		"url-filter": "bevmo.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#age_verification_control"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "thebruery.com"
+ 	}
 }
 ]

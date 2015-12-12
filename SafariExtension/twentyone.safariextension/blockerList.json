@@ -315,5 +315,15 @@
  	"trigger": {
  		"url-filter": "prairieales.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#agegate"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "bevmo.com"
+ 	}
 }
 ]

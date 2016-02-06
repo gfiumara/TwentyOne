@@ -345,5 +345,15 @@
  	"trigger": {
  		"url-filter": "7locksbrewing.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#itro_popup, #itro_opaco"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "redshedman.com"
+ 	}
 }
 ]

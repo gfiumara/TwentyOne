@@ -10,6 +10,6 @@ import UIKit
 {
 	override func drawRect(rect: CGRect)
 	{
-		ProceduralImages.drawSettingsStepIcon()
+		ProceduralImages.drawSettingsStepIcon(stepSize:rect.size)
 	}
 }

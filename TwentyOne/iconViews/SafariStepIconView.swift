@@ -10,6 +10,6 @@ import UIKit
 {
 	override func drawRect(rect: CGRect)
 	{
-		ProceduralImages.drawSafariStepIcon()
+		ProceduralImages.drawSafariStepIcon(stepSize:rect.size)
 	}
 }

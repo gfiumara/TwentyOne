@@ -10,6 +10,6 @@ import UIKit
 {
 	override public func drawRect(rect: CGRect)
 	{
-		ProceduralImages.drawTwentyOneHeaderIcon()
+		ProceduralImages.drawTwentyOneHeaderIcon(headerSize:rect.size)
 	}
 }

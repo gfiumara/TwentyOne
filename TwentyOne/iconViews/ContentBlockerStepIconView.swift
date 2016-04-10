@@ -10,6 +10,6 @@ import UIKit
 {
 	override public func drawRect(rect: CGRect)
 	{
-		ProceduralImages.drawContentBlockerStepIcon()
+		ProceduralImages.drawContentBlockerStepIcon(stepSize:rect.size)
 	}
 }

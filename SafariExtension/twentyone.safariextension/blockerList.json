@@ -356,4 +356,14 @@
  		"url-filter": "redshedman.com"
  	}
 }
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#ageVerify"
+ 	},
+ 	"trigger": {
+ 		"url-filter": "shortsbrewing.com"
+ 	}
+}
 ]

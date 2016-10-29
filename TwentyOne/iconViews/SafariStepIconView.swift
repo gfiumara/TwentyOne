@@ -8,7 +8,7 @@ import UIKit
 
 @IBDesignable class SafariStepIconView:UIView
 {
-	override func drawRect(rect: CGRect)
+	override func draw(_ rect: CGRect)
 	{
 		ProceduralImages.drawSafariStepIcon(stepSize:rect.size)
 	}

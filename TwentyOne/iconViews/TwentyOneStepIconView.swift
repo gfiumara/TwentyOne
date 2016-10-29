@@ -6,9 +6,9 @@
 
 import UIKit
 
-@IBDesignable public class TwentyOneStepIconView:UIView
+@IBDesignable open class TwentyOneStepIconView:UIView
 {
-	override public func drawRect(rect: CGRect)
+	override open func draw(_ rect: CGRect)
 	{
 		ProceduralImages.drawTwentyOneStepIcon(stepSize:rect.size)
 	}

@@ -8,42 +8,42 @@
 import SafariServices
 import UIKit
 
-public class BackgroundDownloader: NSObject, NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate
+open class BackgroundDownloader: NSObject, URLSessionTaskDelegate, URLSessionDownloadDelegate
 {
 	var completionHandler:(UIBackgroundFetchResult) -> Void
 
-	public init(completionHandler:(UIBackgroundFetchResult) -> Void)
+	public init(completionHandler:@escaping (UIBackgroundFetchResult) -> Void)
 	{
 		self.completionHandler = completionHandler
 	}
 
-	public func updateBlockList()
+	open func updateBlockList()
 	{
 		Logger.log("Beginning background download...");
 
-		let configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier(Constants.BackgroundSessionID)
+		let configuration = URLSessionConfiguration.background(withIdentifier: Constants.BackgroundSessionID)
 		configuration.sessionSendsLaunchEvents = true
 		configuration.sharedContainerIdentifier = Constants.AppGroupID
 
-		let session = NSURLSession.init(configuration:configuration, delegate:self, delegateQueue:nil)
-		let downloadTask = session.downloadTaskWithRequest(NSURLRequest.init(URL:Constants.BlockListURL))
+		let session = Foundation.URLSession.init(configuration:configuration, delegate:self, delegateQueue:nil)
+		let downloadTask = session.downloadTask(with: URLRequest.init(url:Constants.BlockListURL as URL))
 		downloadTask.resume()
 	}
 
-	public func URLSession(session:NSURLSession, task:NSURLSessionTask, didCompleteWithError error:NSError?)
+	open func urlSession(_ session:URLSession, task:URLSessionTask, didCompleteWithError error:Error?)
 	{
 		if error != nil {
-			self.completionHandler(.Failed)
+			self.completionHandler(.failed)
 		}
 	}
 
-	public func URLSession(session:NSURLSession, downloadTask:NSURLSessionDownloadTask, didFinishDownloadingToURL temporaryURL:NSURL)
+	open func urlSession(_ session:URLSession, downloadTask:URLSessionDownloadTask, didFinishDownloadingTo temporaryURL:URL)
 	{
 		Logger.log("Finished downloading");
-		let newData = NSData.init(contentsOfURL:temporaryURL)
+		let newData = try? Data.init(contentsOf: temporaryURL)
 		if newData == nil {
 			Logger.log("Newly downloaded data was nil")
-			self.completionHandler(.Failed)
+			self.completionHandler(.failed)
 			return
 		}
 

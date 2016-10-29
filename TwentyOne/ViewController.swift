@@ -6,8 +6,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController
+{
 	@IBOutlet weak var headLabel: UILabel!
 	@IBOutlet weak var subheadLabel: UILabel!
 	@IBOutlet weak var listLastUpdatedLabel: UILabel!
@@ -15,12 +15,20 @@ class ViewController: UIViewController {
 	@IBOutlet weak var enableTwentyOneLabel: UILabel!
 	@IBOutlet weak var forceUpdateButton: UIButton!
 	@IBOutlet weak var openSettingsAppButton: UIButton!
-	
+
+	private lazy var dateFormatter:DateFormatter = {
+		let df = DateFormatter()
+		df.dateStyle = .medium
+		df.timeStyle = .short
+		df.doesRelativeDateFormatting = true
+		return (df)
+	}()
+
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
 
-		var appName:String? = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as! String?
+		var appName:String? = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String?
 		if appName == nil {
 			appName = "Twenty One"
 		} else {
@@ -30,73 +38,64 @@ class ViewController: UIViewController {
 
 		self.subheadLabel.text = "Follow these instructions to block age gates on many alcohol-related websites."
 
-		self.openSettingsAppButton.enabled = UIApplication.sharedApplication().canOpenURL(Constants.SettingsAppURL)
+		self.openSettingsAppButton.isEnabled = UIApplication.shared.canOpenURL(Constants.SettingsAppURL as URL)
 
 		self.updateDates()
 	}
 
 	func updateDates()
 	{
-		var onceToken:dispatch_once_t = 0
-		var dateFormatter:NSDateFormatter? = nil
-		dispatch_once(&onceToken) {
-			dateFormatter = NSDateFormatter()
-			dateFormatter?.dateStyle = .MediumStyle
-			dateFormatter?.timeStyle = .ShortStyle
-			dateFormatter?.doesRelativeDateFormatting = true
-		}
-
-		let defaults = NSUserDefaults.init(suiteName:Constants.AppGroupID)
-		let lastCheckedDate = defaults?.objectForKey(Constants.BlockerListRetrievedDateKey)
-		let lastUpdatedDate = defaults?.objectForKey(Constants.BlockerListUpdatedDateKey)
+		let defaults = UserDefaults.init(suiteName:Constants.AppGroupID)
+		let lastCheckedDate = defaults?.object(forKey: Constants.BlockerListRetrievedDateKey)
+		let lastUpdatedDate = defaults?.object(forKey: Constants.BlockerListUpdatedDateKey)
 
 		if lastUpdatedDate == nil {
 			self.listLastUpdatedLabel.text = "Using default list."
 		} else {
-			self.listLastUpdatedLabel.text = "List last updated \(dateFormatter!.stringFromDate(lastUpdatedDate as! NSDate))."
+			self.listLastUpdatedLabel.text = "List last updated \(self.dateFormatter.string(from: lastUpdatedDate as! Date))."
 		}
 
 		if lastCheckedDate == nil {
 			self.listLastCheckedLabel.text = "Never checked for list updates."
 		} else {
-			self.listLastCheckedLabel.text = "Last checked for list updates \(dateFormatter!.stringFromDate(lastCheckedDate as! NSDate))."
+			self.listLastCheckedLabel.text = "Last checked for list updates \(self.dateFormatter.string(from: lastCheckedDate as! Date))."
 		}
 	}
 
-	@IBAction func openSettingsAppButtonPressed(button:UIButton)
+	@IBAction func openSettingsAppButtonPressed(_ button:UIButton)
 	{
-		if UIApplication.sharedApplication().canOpenURL(Constants.SettingsAppURL) {
-			UIApplication.sharedApplication().openURL(Constants.SettingsAppURL)
+		if UIApplication.shared.canOpenURL(Constants.SettingsAppURL as URL) {
+			UIApplication.shared.openURL(Constants.SettingsAppURL as URL)
 		}
 	}
 
-	override func prefersStatusBarHidden() -> Bool
+	override var prefersStatusBarHidden : Bool
 	{
 		return (false)
 	}
 
-	@IBAction func forceUpdateButtonPressed(button:UIButton)
+	@IBAction func forceUpdateButtonPressed(_ button:UIButton)
 	{
-		self.forceUpdateButton.enabled = false
-		self.forceUpdateButton.setTitle("Fetching update...", forState:.Normal)
+		self.forceUpdateButton.isEnabled = false
+		self.forceUpdateButton.setTitle("Fetching update...", for:UIControlState())
 		ForegroundDownloader.updateBlocklist({(data, response) in
 			BlockListUpdater.saveAndRecompileNewBlockListData(data, completionHandler:{(result) in
 				Logger.log("Retrieved block list data from remote")
-				dispatch_async(dispatch_get_main_queue(), {
+				DispatchQueue.main.async(execute: {
 					self.updateDates()
-					self.forceUpdateButton.setTitle("Successfully Forced Update", forState:.Normal)
+					self.forceUpdateButton.setTitle("Successfully Forced Update", for:UIControlState())
 				})
 			})
 			}, failure:{(error, response) in
 				Logger.log("ERROR (update blocklist): \(error.localizedDescription)")
-				dispatch_async(dispatch_get_main_queue(), {
-					self.forceUpdateButton.setAttributedTitle(NSAttributedString.init(string:"An Error Occurred", attributes:[NSForegroundColorAttributeName:UIColor.redColor()]), forState:.Normal)
-					self.forceUpdateButton.enabled = true
+				DispatchQueue.main.async(execute: {
+					self.forceUpdateButton.setAttributedTitle(NSAttributedString.init(string:"An Error Occurred", attributes:[NSForegroundColorAttributeName:UIColor.red]), for:UIControlState())
+					self.forceUpdateButton.isEnabled = true
 					self.updateDates()
 
-					let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
-					dispatch_after(delayTime, dispatch_get_main_queue()) {
-						self.forceUpdateButton.setTitle("Force Update", forState:.Normal)
+					let delayTime = DispatchTime.now() + Double(Int64(3 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+					DispatchQueue.main.asyncAfter(deadline: delayTime) {
+						self.forceUpdateButton.setTitle("Force Update", for:UIControlState())
 					}
 				})
 		})

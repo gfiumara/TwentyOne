@@ -11,13 +11,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 {
 	var window: UIWindow?
 
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions:[NSObject : AnyObject]?) -> Bool
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey: Any]?) -> Bool
 	{
 		application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
 		return (true)
 	}
 
-	func application(application:UIApplication, performFetchWithCompletionHandler completionHandler:(UIBackgroundFetchResult) -> Void)
+	func application(_ application:UIApplication, performFetchWithCompletionHandler completionHandler:@escaping (UIBackgroundFetchResult) -> Void)
 	{
 		Logger.log("Launched due to performFetch")
 		let downloader = BackgroundDownloader.init(completionHandler:completionHandler)

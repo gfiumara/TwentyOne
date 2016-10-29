@@ -8,7 +8,7 @@ import UIKit
 
 @IBDesignable class SettingsStepIconView:UIView
 {
-	override func drawRect(rect: CGRect)
+	override func draw(_ rect: CGRect)
 	{
 		ProceduralImages.drawSettingsStepIcon(stepSize:rect.size)
 	}

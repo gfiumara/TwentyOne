@@ -6,9 +6,9 @@
 
 import UIKit
 
-@IBDesignable public class ContentBlockerStepIconView:UIView
+@IBDesignable open class ContentBlockerStepIconView:UIView
 {
-	override public func drawRect(rect: CGRect)
+	override open func draw(_ rect: CGRect)
 	{
 		ProceduralImages.drawContentBlockerStepIcon(stepSize:rect.size)
 	}

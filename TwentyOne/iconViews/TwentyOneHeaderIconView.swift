@@ -6,9 +6,9 @@
 
 import UIKit
 
-@IBDesignable public class TwentyOneHeaderIconView:UIView
+@IBDesignable open class TwentyOneHeaderIconView:UIView
 {
-	override public func drawRect(rect: CGRect)
+	override open func draw(_ rect: CGRect)
 	{
 		ProceduralImages.drawTwentyOneHeaderIcon(headerSize:rect.size)
 	}

@@ -4,6 +4,7 @@
  * See LICENSE for details.
  */
 
+import SafariServices
 import UIKit
 
 class ViewController: UIViewController
@@ -15,6 +16,7 @@ class ViewController: UIViewController
 	@IBOutlet weak var enableTwentyOneLabel: UILabel!
 	@IBOutlet weak var forceUpdateButton: UIButton!
 	@IBOutlet weak var openSettingsAppButton: UIButton!
+	var enterForegroundObserver:NSObjectProtocol?
 
 	private lazy var dateFormatter:DateFormatter = {
 		let df = DateFormatter()
@@ -36,11 +38,22 @@ class ViewController: UIViewController
 			self.enableTwentyOneLabel.text = "Enable \(appName!)"
 		}
 
-		self.subheadLabel.text = "Follow these instructions to block age gates on many alcohol-related websites."
+		self.enterForegroundObserver = NotificationCenter.default.addObserver(forName:.UIApplicationWillEnterForeground, object:nil, queue:OperationQueue.main, using:{(Notification) in
+			weak var weakSelf = self
+			weakSelf?.updateInstructions()
+		})
+		self.updateInstructions()
 
 		self.openSettingsAppButton.isEnabled = UIApplication.shared.canOpenURL(Constants.SettingsAppURL as URL)
 
 		self.updateDates()
+	}
+
+	deinit
+	{
+		if let observer = self.enterForegroundObserver {
+			NotificationCenter.default.removeObserver(observer, name:.UIApplicationWillEnterForeground, object:nil)
+		}
 	}
 
 	func updateDates()
@@ -99,6 +112,28 @@ class ViewController: UIViewController
 					}
 				})
 		})
+	}
+
+	func updateInstructions()
+	{
+		SFContentBlockerManager.getStateOfContentBlocker(withIdentifier:Constants.ContentBlockerBundleID, completionHandler:{(state, error) in
+			if let e = error {
+				Logger.log("ERROR (get blocker state): \(e.localizedDescription)")
+				return
+			}
+
+			DispatchQueue.main.async {
+				if let enabled = state?.isEnabled {
+					if enabled {
+						self.subheadLabel.text = "Twenty One is currently enabled. To disable, follow these instructions."
+						self.enableTwentyOneLabel.text = "Disable Twenty One"
+					} else {
+						self.subheadLabel.text = "Follow these instructions to block many (but not all) age gates on alcohol-related websites."
+						self.enableTwentyOneLabel.text = "Enable Twenty One"
+					}
+				}
+			}
+		});
 	}
 }
 

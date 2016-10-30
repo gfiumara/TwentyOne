@@ -38,9 +38,8 @@ class ViewController: UIViewController
 			self.enableTwentyOneLabel.text = "Enable \(appName!)"
 		}
 
-		self.enterForegroundObserver = NotificationCenter.default.addObserver(forName:.UIApplicationWillEnterForeground, object:nil, queue:OperationQueue.main, using:{(Notification) in
-			weak var weakSelf = self
-			weakSelf?.updateInstructions()
+		self.enterForegroundObserver = NotificationCenter.default.addObserver(forName:.UIApplicationWillEnterForeground, object:nil, queue:OperationQueue.main, using:{[weak self] (Notification) in
+			self?.updateInstructions()
 		})
 		self.updateInstructions()
 
@@ -59,26 +58,24 @@ class ViewController: UIViewController
 	func updateDates()
 	{
 		let defaults = UserDefaults.init(suiteName:Constants.AppGroupID)
-		let lastCheckedDate = defaults?.object(forKey: Constants.BlockerListRetrievedDateKey)
-		let lastUpdatedDate = defaults?.object(forKey: Constants.BlockerListUpdatedDateKey)
 
-		if lastUpdatedDate == nil {
-			self.listLastUpdatedLabel.text = "Using default list."
-		} else {
+		if let lastUpdatedDate = defaults?.object(forKey:Constants.BlockerListUpdatedDateKey) {
 			self.listLastUpdatedLabel.text = "List last updated \(self.dateFormatter.string(from: lastUpdatedDate as! Date))."
+		} else {
+			self.listLastUpdatedLabel.text = "Using default list."
 		}
 
-		if lastCheckedDate == nil {
-			self.listLastCheckedLabel.text = "Never checked for list updates."
-		} else {
+		if let lastCheckedDate = defaults?.object(forKey:Constants.BlockerListRetrievedDateKey) {
 			self.listLastCheckedLabel.text = "Last checked for list updates \(self.dateFormatter.string(from: lastCheckedDate as! Date))."
+		} else {
+			self.listLastCheckedLabel.text = "Never checked for list updates."
 		}
 	}
 
 	@IBAction func openSettingsAppButtonPressed(_ button:UIButton)
 	{
-		if UIApplication.shared.canOpenURL(Constants.SettingsAppURL as URL) {
-			UIApplication.shared.openURL(Constants.SettingsAppURL as URL)
+		if UIApplication.shared.canOpenURL(Constants.SettingsAppURL) {
+			UIApplication.shared.open(Constants.SettingsAppURL)
 		}
 	}
 

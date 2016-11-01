@@ -5,21 +5,14 @@
  */
 
 import Foundation
+import os
 
 public struct Logger
 {
-	#if DEBUG
-	public static var enabled:Bool = true
-	#else
-	public static var enabled:Bool = false
-	#endif
+	static let log = OSLog(subsystem:Constants.AppGroupID, category:"debug")
 
 	public static func log(_ message:String, file:String = #file, function:String = #function, line:Int = #line)
 	{
-		if !Logger.enabled {
-			return
-		}
-
-		print("\(function)|\(line): \(message)")
+		os_log("%@|%d: %@", log:log, type:.debug, function, line, message)
 	}
 }

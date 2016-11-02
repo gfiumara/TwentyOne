@@ -355,7 +355,7 @@
  	"trigger": {
  		"url-filter": "redshedman.com"
  	}
-}
+},
 {
 	"action": {
 		"type": "css-display-none",

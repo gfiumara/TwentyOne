@@ -72,7 +72,7 @@
 	"action": {
 		"type": "css-display-none",
 		"resource-type": "document",
-		"selector": ".agegate-container, .agegate-overlay, #ageGate-popup, #ageGate-screen"
+		"selector": ".agegate-model"
 	},
 	"trigger": {
 		"url-filter": "samueladams.com"

@@ -49,7 +49,7 @@ public struct BlockListUpdater
 			if error == nil {
 				Logger.log("Rebuild was successful")
 			} else {
-				Logger.log("ERROR (rebuilding rules): \(error)")
+				Logger.log("ERROR (rebuilding rules): \(String(describing:error))")
 			}
 
 			if dataIsNew {

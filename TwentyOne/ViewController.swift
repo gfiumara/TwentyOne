@@ -99,7 +99,7 @@ class ViewController: UIViewController
 			}, failure:{(error, response) in
 				Logger.log("ERROR (update blocklist): \(error.localizedDescription)")
 				DispatchQueue.main.async(execute: {
-					self.forceUpdateButton.setAttributedTitle(NSAttributedString.init(string:"An Error Occurred", attributes:[NSForegroundColorAttributeName:UIColor.red]), for:UIControlState())
+					self.forceUpdateButton.setAttributedTitle(NSAttributedString.init(string:"An Error Occurred", attributes:[NSAttributedStringKey.foregroundColor:UIColor.red]), for:UIControlState())
 					self.forceUpdateButton.isEnabled = true
 					self.updateDates()
 

@@ -37,7 +37,7 @@ open class ProceduralImages : NSObject
 		//// Polygon Drawing
 		context?.saveGState()
 		context?.translateBy(x: 267.85, y: 38.91)
-		context?.rotate(by: 30 * CGFloat(M_PI) / 180)
+		context?.rotate(by: 30 * CGFloat(Float.pi) / 180)
 
 		let polygonPath = UIBezierPath()
 		polygonPath.move(to: CGPoint(x: 25, y: 0))
@@ -53,7 +53,7 @@ open class ProceduralImages : NSObject
 		//// Polygon 2 Drawing
 		context?.saveGState()
 		context?.translateBy(x: 133.15, y: 371.09)
-		context?.rotate(by: -150 * CGFloat(M_PI) / 180)
+		context?.rotate(by: -150 * CGFloat(Float.pi) / 180)
 
 		let polygon2Path = UIBezierPath()
 		polygon2Path.move(to: CGPoint(x: 25, y: 0))
@@ -73,7 +73,7 @@ open class ProceduralImages : NSObject
 		//// Polygon Drawing
 		context?.saveGState()
 		context?.translateBy(x: -53.78, y: 95.47)
-		context?.rotate(by: -22.5 * CGFloat(M_PI) / 180)
+		context?.rotate(by: -22.5 * CGFloat(Float.pi) / 180)
 
 		let polygonPath = UIBezierPath()
 		polygonPath.move(to: CGPoint(x: 195, y: 0))
@@ -142,7 +142,7 @@ open class ProceduralImages : NSObject
 		//// Group
 		context?.saveGState()
 		context?.translateBy(x: -34, y: 200)
-		context?.rotate(by: -45 * CGFloat(M_PI) / 180)
+		context?.rotate(by: -45 * CGFloat(Float.pi) / 180)
 
 
 
@@ -217,7 +217,7 @@ open class ProceduralImages : NSObject
 		let textStyle = NSMutableParagraphStyle()
 		textStyle.alignment = .left
 
-		let textFontAttributes = [NSFontAttributeName: UIFont(name: "Superclarendon-Regular", size: 175)!, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: textStyle]
+		let textFontAttributes = [NSAttributedStringKey.font: UIFont(name: "Superclarendon-Regular", size: 175)!, NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.paragraphStyle: textStyle]
 
 		let textTextHeight: CGFloat = textTextContent.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
 		context?.saveGState()

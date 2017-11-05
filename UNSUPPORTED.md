@@ -23,7 +23,7 @@ If you encounter a site where this is the case, please update the list below.
 | [Long Trail](http://longtrail.com) | Cookie + Redirect | | 11/15/2015 |
 | [MillerCoors](http://www.millercoors.com/) | Cookie + Redirect | | 11/15/2015 |
 | [Monument City](http://www.monumentcitybrewing.com) | Redirect | | 11/15/2015 |
-| [New Belgium](http://www.newbelgium.com/) | Scroll Hijack | Bootstrap | 11/15/2015 |
+| [New Belgium](http://www.newbelgium.com/) | Scroll Hijack | Bootstrap | 11/30/2016 |
 | [Ninkasi](http://www.ninkasibrewing.com/) | Cookie + Redirect | | 11/15/2015 |
 | [Odell](http://odellbrewing.com) | CSS | Class on root element | 11/15/2015 |
 | [Oskar Blues](http://www.oskarblues.com) | Cookie + CSS | Class on all elements | 11/15/2015 |

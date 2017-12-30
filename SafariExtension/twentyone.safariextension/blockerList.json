@@ -375,5 +375,15 @@
  	"trigger": {
  		"url-filter": "saranac.com"
  	}
+},
+{
+	"action": {
+		"type": "css-display-none",
+		"resource-type": "document",
+		"selector": "#verify_age"
+	},
+	"trigger": {
+		"url-filter": "saintsrowbeer.com"
+	}
 }
 ]

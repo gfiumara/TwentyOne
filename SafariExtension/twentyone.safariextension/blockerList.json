@@ -380,7 +380,7 @@
 	"action": {
 		"type": "css-display-none",
 		"resource-type": "document",
-		"selector": "#verify_age"
+		"selector": "#verify-age"
 	},
 	"trigger": {
 		"url-filter": "saintsrowbeer.com"

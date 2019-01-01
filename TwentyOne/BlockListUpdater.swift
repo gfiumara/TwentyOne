@@ -1,6 +1,6 @@
 /*
  * BlockListUpdater.swift
- * Part of http://github.com/gfiumara/TwentyOne by Gregory Fiumara.
+ * Part of https://github.com/gfiumara/TwentyOne by Gregory Fiumara.
  * See LICENSE for details.
  */
 

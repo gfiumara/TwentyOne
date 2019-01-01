@@ -38,7 +38,7 @@ class ViewController: UIViewController
 			self.enableTwentyOneLabel.text = "Enable \(appName!)"
 		}
 
-		self.enterForegroundObserver = NotificationCenter.default.addObserver(forName:.UIApplicationWillEnterForeground, object:nil, queue:OperationQueue.main, using:{[weak self] (Notification) in
+		self.enterForegroundObserver = NotificationCenter.default.addObserver(forName:UIApplication.willEnterForegroundNotification, object:nil, queue:OperationQueue.main, using:{[weak self] (Notification) in
 			self?.updateInstructions()
 		})
 		self.updateInstructions()
@@ -51,7 +51,7 @@ class ViewController: UIViewController
 	deinit
 	{
 		if let observer = self.enterForegroundObserver {
-			NotificationCenter.default.removeObserver(observer, name:.UIApplicationWillEnterForeground, object:nil)
+			NotificationCenter.default.removeObserver(observer, name:UIApplication.willEnterForegroundNotification, object:nil)
 		}
 	}
 
@@ -87,25 +87,25 @@ class ViewController: UIViewController
 	@IBAction func forceUpdateButtonPressed(_ button:UIButton)
 	{
 		self.forceUpdateButton.isEnabled = false
-		self.forceUpdateButton.setTitle("Fetching update...", for:UIControlState())
+		self.forceUpdateButton.setTitle("Fetching update...", for:UIControl.State())
 		ForegroundDownloader.updateBlocklist({(data, response) in
 			BlockListUpdater.saveAndRecompileNewBlockListData(data, completionHandler:{(result) in
 				Logger.log("Retrieved block list data from remote")
 				DispatchQueue.main.async(execute: {
 					self.updateDates()
-					self.forceUpdateButton.setTitle("Successfully Forced Update", for:UIControlState())
+					self.forceUpdateButton.setTitle("Successfully Forced Update", for:UIControl.State())
 				})
 			})
 			}, failure:{(error, response) in
 				Logger.log("ERROR (update blocklist): \(error.localizedDescription)")
 				DispatchQueue.main.async(execute: {
-					self.forceUpdateButton.setAttributedTitle(NSAttributedString.init(string:"An Error Occurred", attributes:[NSAttributedStringKey.foregroundColor:UIColor.red]), for:UIControlState())
+					self.forceUpdateButton.setAttributedTitle(NSAttributedString.init(string:"An Error Occurred", attributes:[NSAttributedString.Key.foregroundColor:UIColor.red]), for:UIControl.State())
 					self.forceUpdateButton.isEnabled = true
 					self.updateDates()
 
 					let delayTime = DispatchTime.now() + Double(Int64(3 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
 					DispatchQueue.main.asyncAfter(deadline: delayTime) {
-						self.forceUpdateButton.setTitle("Force Update", for:UIControlState())
+						self.forceUpdateButton.setTitle("Force Update", for:UIControl.State())
 					}
 				})
 		})

@@ -217,7 +217,7 @@ open class ProceduralImages : NSObject
 		let textStyle = NSMutableParagraphStyle()
 		textStyle.alignment = .left
 
-		let textFontAttributes = [NSAttributedStringKey.font: UIFont(name: "Superclarendon-Regular", size: 175)!, NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.paragraphStyle: textStyle]
+		let textFontAttributes = [NSAttributedString.Key.font: UIFont(name: "Superclarendon-Regular", size: 175)!, NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.paragraphStyle: textStyle]
 
 		let textTextHeight: CGFloat = textTextContent.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
 		context?.saveGState()

@@ -246,7 +246,7 @@
 					08FD31721BF3D2F900D30625 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = SELUQ362Q4;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -259,7 +259,7 @@
 					08FD318B1BF3D3D400D30625 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = SELUQ362Q4;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -494,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone;
 				PRODUCT_NAME = "Twenty One";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -513,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.twentyone;
 				PRODUCT_NAME = "Twenty One";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -531,7 +531,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -548,7 +548,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

@@ -475,6 +475,7 @@
 				TWENTYONE_BUILD_VERSION = 10;
 				TWENTYONE_DISPLAY_VERSION = 1.0.5;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

@@ -18,20 +18,20 @@ struct ForegroundDownloader
 
 			if error != nil {
 				if failure != nil {
-					failure!(error! as NSError, response as! HTTPURLResponse!)
+					failure!(error! as NSError, response as! HTTPURLResponse)
 				}
 				return
 			}
 
 			if data == nil {
 				if failure != nil {
-					failure!(NSError.init(domain:NSURLErrorDomain, code:NSURLErrorCannotDecodeContentData, userInfo:nil), response as! HTTPURLResponse!)
+					failure!(NSError.init(domain:NSURLErrorDomain, code:NSURLErrorCannotDecodeContentData, userInfo:nil), response as! HTTPURLResponse)
 				}
 				return
 			}
 
 			if success != nil {
-				success!(data!, response as! HTTPURLResponse!)
+				success!(data!, response as! HTTPURLResponse)
 			}
 		}).resume()
 	}

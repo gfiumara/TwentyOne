@@ -240,7 +240,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Greg Fiumara";
 				TargetAttributes = {
 					08FD31721BF3D2F900D30625 = {
@@ -270,7 +270,7 @@
 			};
 			buildConfigurationList = 08FD316E1BF3D2F900D30625 /* Build configuration list for PBXProject "TwentyOne" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

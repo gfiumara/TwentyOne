@@ -191,7 +191,11 @@ open class ProceduralImages : NSObject
 
 		//// Oval 2 Drawing
 		let oval2Path = UIBezierPath(ovalIn: CGRect(x: 150, y: 150, width: 100, height: 100))
-		UIColor.white.setFill()
+		if #available(iOS 13.0, *) {
+			UIColor.systemBackground.setFill()
+		} else {
+			UIColor.white.setFill()
+		}
 		oval2Path.fill()
 		UIColor.darkGray.setStroke()
 		oval2Path.lineWidth = 2

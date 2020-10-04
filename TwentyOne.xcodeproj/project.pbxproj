@@ -13,7 +13,6 @@
 		08292F1D1BF8CFD60055F357 /* BackgroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F1B1BF8CFD60055F357 /* BackgroundDownloader.swift */; };
 		08292F1E1BF8CFD60055F357 /* ForegroundDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F1C1BF8CFD60055F357 /* ForegroundDownloader.swift */; };
 		08292F201BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08292F1F1BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements */; };
-		08292F241BF8D0A50055F357 /* TwentyOne.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08292F231BF8D0A50055F357 /* TwentyOne.entitlements */; };
 		08292F251BF8D0BB0055F357 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08292F171BF8CFCD0055F357 /* Constants.swift */; };
 		08F02EF21BF6C3E800B5E57E /* BlockListUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F02EF11BF6C3E800B5E57E /* BlockListUpdater.swift */; };
 		08F9669C1BF799EB007C9E2A /* SafariStepIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9669B1BF799EB007C9E2A /* SafariStepIconView.swift */; };
@@ -292,7 +291,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08292F241BF8D0A50055F357 /* TwentyOne.entitlements in Resources */,
 				08292F201BF8D03D0055F357 /* TwentyOneContentBlocker.entitlements in Resources */,
 				08FD31811BF3D2F900D30625 /* LaunchScreen.storyboard in Resources */,
 				08FD317E1BF3D2F900D30625 /* Assets.xcassets in Resources */,

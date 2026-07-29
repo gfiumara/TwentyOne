@@ -5,6 +5,7 @@
 */
 
 import UIKit
+import UniformTypeIdentifiers
 import MobileCoreServices
 
 class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
@@ -14,7 +15,7 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
 		if let defaults = UserDefaults.init(suiteName:Constants.AppGroupID) {
 			if let str = defaults.object(forKey: Constants.BlockerListNameKey) as? String {
 				let data = str.data(using: String.Encoding.utf8)
-				let attachment = NSItemProvider(item:data as NSSecureCoding?, typeIdentifier:kUTTypeJSON as String)
+				let attachment = NSItemProvider(item:data as NSSecureCoding?, typeIdentifier:UTType.json.identifier)
 				let item = NSExtensionItem()
 				item.attachments = [attachment]
 				context.completeRequest(returningItems: [item], completionHandler:nil)

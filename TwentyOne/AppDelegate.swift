@@ -10,8 +10,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-	var window: UIWindow?
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey: Any]?) -> Bool
 	{
 		BGTaskScheduler.shared.register(forTaskWithIdentifier:Constants.BackgroundSessionID, using:nil) { task in
@@ -19,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 		}
 		self.scheduleBackgroundDownload()
 		return (true)
+	}
+
+	func application(_ application:UIApplication, configurationForConnecting connectingSceneSession:UISceneSession, options:UIScene.ConnectionOptions) -> UISceneConfiguration
+	{
+		return UISceneConfiguration(name:"Default Configuration", sessionRole:connectingSceneSession.role)
+	}
+
+	func application(_ application:UIApplication, didDiscardSceneSessions sceneSessions:Set<UISceneSession>)
+	{
 	}
 
 	func applicationDidEnterBackground(_ application:UIApplication)

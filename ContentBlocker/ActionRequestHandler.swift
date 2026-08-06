@@ -12,20 +12,16 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
 
 	func beginRequest(with context: NSExtensionContext)
 	{
-		if let defaults = UserDefaults.init(suiteName:Constants.AppGroupID) {
-			if let str = defaults.object(forKey: Constants.BlockerListNameKey) as? String {
-				let data = str.data(using: String.Encoding.utf8)
-				let attachment = NSItemProvider(item:data as NSSecureCoding?, typeIdentifier:UTType.json.identifier)
-				let item = NSExtensionItem()
-				item.attachments = [attachment]
-				context.completeRequest(returningItems: [item], completionHandler:nil)
-			}
+		let attachment:NSItemProvider
+		if let fileURL = Constants.BlockerListFileURL, FileManager.default.fileExists(atPath:fileURL.path) {
+			attachment = NSItemProvider(contentsOf:fileURL)!
 		} else {
-			let attachment = NSItemProvider(contentsOf: Bundle.main.url(forResource: Constants.BlockerListNameKey, withExtension:Constants.JSONExtension))!
-			let item = NSExtensionItem()
-			item.attachments = [attachment]
-			context.completeRequest(returningItems: [item], completionHandler: nil);
+			attachment = NSItemProvider(contentsOf: Bundle.main.url(forResource: Constants.BlockerListNameKey, withExtension:Constants.JSONExtension))!
 		}
+
+		let item = NSExtensionItem()
+		item.attachments = [attachment]
+		context.completeRequest(returningItems: [item], completionHandler:nil)
 	}
 
 }

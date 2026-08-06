@@ -11,12 +11,15 @@ public struct BlockListUpdater
 {
 	public static func saveAndRecompileNewBlockListData(_ data:Data, completionHandler:((UIBackgroundFetchResult) -> Void)?)
 	{
-		let dataString = NSString.init(data:data, encoding:String.Encoding.utf8.rawValue)
-		if dataString == nil {
+		if NSString.init(data:data, encoding:String.Encoding.utf8.rawValue) == nil {
 			Logger.log("Newly downloaded data string was nil")
-			if completionHandler != nil {
-				completionHandler!(.failed)
-			}
+			completionHandler?(.failed)
+			return
+		}
+
+		guard let fileURL = Constants.BlockerListFileURL else {
+			Logger.log("Could not resolve shared App Group container URL")
+			completionHandler?(.failed)
 			return
 		}
 
@@ -24,23 +27,20 @@ public struct BlockListUpdater
 		let defaults = UserDefaults.init(suiteName:Constants.AppGroupID)
 		defaults?.set(currentDateAndTime, forKey:Constants.BlockerListRetrievedDateKey)
 
-		var dataIsNew = false
-		if defaults?.object(forKey: Constants.BlockerListNameKey) == nil {
-			Logger.log("No previous block list found. Storing new block list.")
-			defaults?.set(dataString, forKey:Constants.BlockerListNameKey)
-			defaults?.synchronize()
-			dataIsNew = true
-		} else {
-			let oldString:NSString? = defaults?.object(forKey: Constants.BlockerListNameKey) as! NSString?
-			if oldString != dataString {
-				Logger.log("Data is new, saving.")
-				defaults?.set(dataString, forKey:Constants.BlockerListNameKey)
-				defaults?.synchronize()
-				dataIsNew = true
-			} else {
-				Logger.log("Downloaded data was the same")
-				dataIsNew = false
+		let oldData = try? Data.init(contentsOf:fileURL)
+		let dataIsNew = oldData != data
+
+		if dataIsNew {
+			Logger.log("Data is new, saving.")
+			do {
+				try data.write(to:fileURL, options:.atomic)
+			} catch {
+				Logger.log("ERROR (writing block list file): \(error.localizedDescription)")
+				completionHandler?(.failed)
+				return
 			}
+		} else {
+			Logger.log("Downloaded data was the same")
 		}
 
 		/* Rebuild and return to application delegate */
@@ -49,19 +49,13 @@ public struct BlockListUpdater
 			if error == nil {
 				Logger.log("Rebuild was successful")
 			} else {
-				Logger.log("ERROR (rebuilding rules): \(String(describing:error))")
+				Logger.log("ERROR (rebuilding rules): \(error!.localizedDescription)")
 			}
 
 			if dataIsNew {
 				defaults?.set(currentDateAndTime, forKey:Constants.BlockerListUpdatedDateKey)
-				if (completionHandler != nil) {
-					completionHandler!(.newData)
-				}
-			} else {
-				if (completionHandler != nil) {
-					completionHandler!(.noData);
-				}
 			}
+			completionHandler?(dataIsNew ? .newData : .noData)
 		})
 
 	}

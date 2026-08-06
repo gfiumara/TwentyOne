@@ -17,4 +17,12 @@ struct Constants
 	static let JSONExtension = "json"
 	static let BlockerListRetrievedDateKey = "BlockerListRetrievedDate"
 	static let BlockerListUpdatedDateKey = "BlockerListUpdatedDate"
+
+	static var BlockerListFileURL:URL?
+	{
+		return FileManager.default
+			.containerURL(forSecurityApplicationGroupIdentifier:AppGroupID)?
+			.appendingPathComponent(BlockerListNameKey)
+			.appendingPathExtension(JSONExtension)
+	}
 }

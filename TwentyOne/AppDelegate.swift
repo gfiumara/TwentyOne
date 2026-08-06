@@ -57,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 		})
 		task.expirationHandler = {
 			Logger.log("BGProcessingTask expired before completion")
+			task.setTaskCompleted(success:false)
 		}
 
 		downloader.updateBlockList()
